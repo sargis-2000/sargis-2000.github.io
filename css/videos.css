@@ -1,0 +1,129 @@
+.videos {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 70px;
+   gap: 40px;
+}
+.videos h2 {
+    color: #ffb742;
+}
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 50px;
+}
+.video1 {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s ease-out;
+}
+.video1::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0 0 0 / 20%);
+    opacity: 0;
+    transition: .5s ease-out;
+    border-radius: 5px;
+}
+.video1:hover::after {
+    opacity: 1;
+}
+.video1 img {
+   display: block;
+   max-width: 100%;
+   border-radius: 5px 5px 0 0;
+}
+.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: #ffb742;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+.like-comment {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(58 57 55 / 92%);
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+}
+.like {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.like span {
+    color: #ffb742;
+}
+.like-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.comment {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.comment span {
+    color: #ffb742;
+}
+.comment-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.video1-zoom {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.video1-hide {
+    color: #ffb742;
+    cursor: pointer;
+    font-size: 25px;
+}
+.video1-zoom iframe {
+    max-width: 100%;
+}
+@media screen and (max-width: 1300px) {
+    .video-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .video1-zoom {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

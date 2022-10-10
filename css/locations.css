@@ -1,0 +1,165 @@
+.locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    gap: 40px;
+    margin-top: -23px;
+}
+.locations h2 {
+    color: #ffb742;
+}
+.location-items {
+    display: grid;
+    gap: 40px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+.location {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: .5s ease-out;
+}
+.location-image {
+    position: relative;
+}
+.location-image::after {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .5s ease-out;
+    border-radius: 5px;
+}
+.location-image:hover::after {
+    opacity: 1;
+}
+.location-image img {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    transition: .5s ease-out;
+}
+.location-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #3a3937;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    margin-top: -5px;
+}
+.zoom {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ffb742;
+    border-radius: 50%;
+    z-index: 1;
+}
+.location-name {
+    display: flex;
+    gap: 10px;
+}
+.location-name h5 {
+    color: #ffb742;
+    font-size: 18px;
+}
+.like-comment {
+    display: flex;
+    justify-content: space-between;
+}
+.like {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.like span {
+    color: #ffb742;
+}
+.like button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s ease-out;
+}
+.like button:hover {
+    transition: .5s ease-out;
+    transform: scale(1.3);
+}
+.comment {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.comment span {
+    color: #ffb742;
+}
+.comment button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s ease-out;
+}
+.comment button:hover {
+    transition: .5s ease-out;
+    transform: scale(1.3);
+}
+.location-content p {
+    color: #ffb742;
+}
+.see-more {
+    width: 100px;
+    background-color: #ffb742;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    transition: .5s ease-out;
+}
+.see-more:hover {
+    background-color: #4e4d4d;
+    transition: .5s ease-out;
+}
+.location1-image-container img:hover {
+    cursor: zoom-out;
+}
+.location2-image-container img:hover {
+    cursor: zoom-out;
+}
+.location3-image-container img:hover {
+    cursor: zoom-out;
+}
+.location4-image-container img:hover {
+    cursor: zoom-out;
+}
+.location5-image-container img:hover {
+    cursor: zoom-out;
+}
+.location6-image-container img:hover {
+    cursor: zoom-out;
+}
+@media screen and (max-width: 1126px) {
+    .location-items {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 745px) {
+    .location-items {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .location {
+        max-width: 100%;
+    }
+}

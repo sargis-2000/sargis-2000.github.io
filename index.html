@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel - Tour Agency</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="fav icon" href="images/l.png">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+           <div class="logo">
+              <a href="index.html">Laravel</a>
+           </div>
+           <div class="links">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="articles.html">Articles</a></li>
+             <li><a href="locations.html">Locations</a></li>
+             <li><a href="videos.html">Videos</a></li>
+             <li><a href="#" data-sign="sign">Sign in</a></li>
+           </div>
+           <div class="links2">
+              <img src="images/phone.png" alt="phone">
+              <p class="number">(+1) 720-345-3525</p>
+           </div>
+           <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+           </div>
+           <div class="menu">
+             <a href="index.html">Home</a>
+             <a href="articles.html">Articles</a>
+             <a href="locations.html">Locations</a>
+             <a href="videos.html">Videos</a>
+             <a href="#" data-mbsign="mb-sign">Sign in</a>
+           </div>
+        </nav>
+        <div class="sign-in">
+           <div class="sign">
+              <form action="#">
+               <div class="links2-m">
+                  <img src="images/phone.png" alt="phone">
+                  <p class="number">(+1) 720-345-3525</p>
+               </div>
+               <span class="close">X</span>
+               <div class="forms">
+                  <input class="name" type="text" name="text" placeholder="Your Name" required="required">
+                  <input class="password" type="password" name="password" placeholder="Password" required="required">
+               </div>
+               <div class="chekbox">
+                  <input class="checked" type="checkbox" name="checkbox">
+                  <label class="check" for="checkbox">Remember Me</label>
+               </div>
+               <div class="sbm">
+                  <button class="submit" type="submit">Sign Up</button>
+               </div>
+              </form>
+           </div>
+        </div>
+    </header>
+    <div class="slider">
+       <div class="slider-item1">
+          <div class="slider-container">
+             <h1 class="container-title1">Discover Amazing places in Italy</h1>
+             <p class="container-title2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptates provident ipsum dolorem consectetur quas repellat esse. Perferendis molestias in optio neque eius tenetur doloribus laboriosam, voluptate ipsam non necessitatibus!</p>
+             <div class="choise">
+               <input class="radio" type="radio" name="radio">
+               <label class="radio-label">What would you like to do?</label>
+               <input class="radio" type="radio" name="radio">
+               <label class="radio-label">Where would you like to go?</label>
+             </div>
+             <div class="search">
+                <button class="submit" type="submit">Search</button>
+             </div>
+          </div>
+       </div>
+       <div class="slider-item2">
+         <div class="slider-container">
+            <h1 class="container-title1">It's Perfect Time to Travel in Italy</h1>
+            <p class="container-title2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptates provident ipsum dolorem consectetur quas repellat esse. Perferendis molestias in optio neque eius tenetur doloribus laboriosam, voluptate ipsam non necessitatibus!</p>
+            <div class="choise">
+              <input class="radio" type="radio" name="radio">
+              <label class="radio-label">What would you like to do?</label>
+              <input class="radio" type="radio" name="radio">
+              <label class="radio-label">Where would you like to go?</label>
+            </div>
+            <div class="search">
+               <button class="submit" type="submit">Search</button>
+            </div>
+         </div>
+       </div>
+       <div class="slider-item3">
+         <div class="slider-container">
+            <h1 class="container-title1">Discover Amazing places in Italy</h1>
+            <p class="container-title2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptates provident ipsum dolorem consectetur quas repellat esse. Perferendis molestias in optio neque eius tenetur doloribus laboriosam, voluptate ipsam non necessitatibus!</p>
+            <div class="choise">
+              <input class="radio" type="radio" name="radio">
+              <label class="radio-label">What would you like to do?</label>
+              <input class="radio" type="radio" name="radio">
+              <label class="radio-label">Where would you like to go?</label>
+            </div>
+            <div class="search">
+               <button class="submit" type="submit">Search</button>
+            </div>
+         </div>
+       </div>
+       <div class="slider-item4">
+         <div class="slider-container">
+            <h1 class="container-title1">It's Perfect Time to Travel in Italy</h1>
+            <p class="container-title2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptates provident ipsum dolorem consectetur quas repellat esse. Perferendis molestias in optio neque eius tenetur doloribus laboriosam, voluptate ipsam non necessitatibus!</p>
+            <div class="choise">
+              <input class="radio" type="radio" name="radio">
+              <label class="radio-label">What would you like to do?</label>
+              <input class="radio" type="radio" name="radio">
+              <label class="radio-label">Where would you like to go?</label>
+            </div>
+            <div class="search">
+               <button class="submit" type="submit">Search</button>
+            </div>
+         </div>
+       </div>
+     </div>
+     <div class="benefits">
+        <div class="ben-title">
+           <h1>Benefits of Laravel</h1>
+        </div>
+        <div class="ben-items">
+           <div class="item1" id="items">
+              <div class="icon">
+                 <img src="images/bed.png" alt="bed">
+              </div>
+              <div class="item1-items">
+                 <h4 id="item1-title1">Deluxe Room</h4>
+                 <p id="item1-title2">Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy</p>
+              </div>
+           </div>
+
+           <div class="item2"  id="items">
+              <div class="icon2">
+                 <img src="images/food.png" alt="food">
+              </div>
+              <div class="item2-items">
+                 <h4 id="item2-title1">Healthy Food</h4>
+                 <p id="item2-title2">Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy</p>
+              </div>
+           </div>
+
+           <div class="item3"  id="items">
+              <div class="icon3">
+                 <img src="images/taxi.png" alt="taxi">
+              </div>
+              <div class="item3-items">
+                 <h4 id="item3-title1">Airport Taxi</h4>
+                 <p id="item3-title2">Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy</p>
+              </div>
+           </div>
+
+           <div class="item4"  id="items">
+              <div class="icon4">
+                 <img src="images/game.png" alt="game">
+              </div>
+              <div class="item4-items">
+                 <h4 id="item4-title1">Game Rooms</h4>
+                 <p id="item4-title2">Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy</p>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="gallery">
+        <div class="gallery-item1">
+           <span>Tour Gallery</span>
+           <h2>Best Tourist's Shared Photos</h2>
+        </div>
+        <div class="gallery-item2">
+            <div class="location1" id="location">
+               <div class="zoom">
+                  <img src="images/zoom1.svg" alt="zoom" width="18px">
+               </div>
+               <img src="images/rome.png" alt="Rome">
+               <h4 id="rome">Rome</h4>
+            </div>
+            <div class="location2"  id="location">
+               <div class="zoom2">
+                  <img src="images/zoom1.svg" alt="zoom" width="18px">
+               </div>
+               <img src="images/florence2.png" alt="Florence">
+               <h4 id="florence">Florence</h4>
+            </div>
+            <div class="location3"  id="location">
+               <div class="zoom3">
+                  <img src="images/zoom1.svg" alt="zoom" width="18px">
+               </div>
+               <img src="images/venetsiya.png" alt="Venice">
+               <h4 id="venecia">Venice</h4>
+            </div>
+            <div class="location4"  id="location">
+               <div class="zoom4">
+                  <img src="images/zoom1.svg" alt="zoom" width="18px">
+               </div>
+               <img src="images/milan.png" alt="Milan">
+               <h4 id="milan">Milan</h4>
+            </div>
+            <div class="location5"  id="location">
+               <div class="zoom5">
+                  <img src="images/zoom1.svg" alt="zoom" width="18px">
+               </div>
+               <img src="images/napoli.png" alt="Napoli">
+               <h4 id="napoli">Napoli</h4>
+            </div>
+            <div class="location6"  id="location">
+               <div class="zoom6">
+                  <img src="images/zoom1.svg" alt="zoom" width="18px">
+               </div>
+               <img src="images/tuscany.png" alt="Tuscany">
+               <h4 id="tuscany">Tuscany</h4>
+            </div>
+         </div>
+     </div>
+     <div class="location1-zoom">
+        <div class="location1-image-container">
+           <img src="images/rome.png" alt="Rome">
+           <span class="zoom-hidden" title="Close">X</span>
+        </div>
+     </div>
+     <div class="location2-zoom">
+       <div class="location2-image-container">
+          <img src="images/florence2.png" alt="Florence">
+          <span class="zoom2-hidden" title="Close">X</span>
+       </div>
+      </div>
+      <div class="location3-zoom">
+         <div class="location3-image-container">
+            <img src="images/venetsiya.png" alt="Venecia">
+            <span class="zoom3-hidden" title="Close">X</span>
+         </div>
+      </div>
+      <div class="location4-zoom">
+         <div class="location4-image-container">
+            <img src="images/milan.png" alt="Milan">
+            <span class="zoom4-hidden" title="Close">X</span>
+         </div>
+      </div>
+      <div class="location5-zoom">
+         <div class="location5-image-container">
+            <img src="images/napoli.png" alt="Napoli">
+            <span class="zoom5-hidden" title="Close">X</span>
+         </div>
+      </div>
+      <div class="location6-zoom">
+         <div class="location6-image-container">
+            <img src="images/tuscany.png" alt="Tuscany">
+            <span class="zoom6-hidden" title="Close">X</span>
+         </div>
+      </div>
+      <div class="statistics">
+         <div class="statistics-item1">
+            <span>Laravel Statistics</span>
+            <h2>We Value Your Feedback And Strive To Provide The Best</h2>
+         </div>
+         <div class="statistics-item2">
+            <div class="statistic1">
+               <img src="images/clients.svg" alt="Clients" width="36px">
+               <h2 id="num1">0</h2>
+               <p>Happy Clients<span></span></p>
+            </div>
+            <div class="statistic2">
+               <img src="images/airplane.svg" alt="Tours" width="36px">
+               <h2 id="num2">0</h2>
+               <p>Best Tours<span></span></p>
+            </div>
+            <div class="statistic3">
+               <img src="images/business.svg" alt="Business" width="36px">
+               <h2 id="num3">0</h2>
+               <p>In Business<span></span></p>
+            </div>
+            <div class="statistic4">
+               <img src="images/support.svg" alt="Support" width="36px">
+               <h2 id="num4">0</h2>
+               <p>Support Cases<span></span></p>
+            </div>
+         </div>
+      </div>
+      <div class="poular-places">
+         <div class="places-item1">
+            <span id="place-items">Popular Places</span>
+            <h2 id="place-items">Travel Most Popular Places In The Italy</h2>
+         </div>
+         <div class="places-item2">
+            <div class="place1" id="places">
+               <img src="images/place1.png" alt="place1">
+               <span class="price">$200</span>
+               <div class="place1-items2">
+                  <div class="stars">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+                  <div class="place1-items3">
+                     <img src="images/location.svg" alt="location">
+                     <h5>Rome Colesseum</h5>
+                  </div>
+                  <span class="time-zone">7 Days - 6 Night</span>
+               </div>
+            </div>
+            <div class="place2" id="places">
+               <img src="images/place2.png" alt="place2">
+               <span class="price2">$220</span>
+               <div class="place2-items2">
+                  <div class="stars2">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+                  <div class="place2-items3">
+                     <img src="images/location.svg" alt="location">
+                     <h5>Rome Sant'Angelo</h5>
+                  </div>
+                  <span class="time-zone">7 Days - 6 Night</span>
+               </div>
+            </div>
+            <div class="place3" id="places">
+               <img src="images/place3.png" alt="place3">
+               <span class="price3">$240</span>
+               <div class="place3-items2">
+                  <div class="stars3">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+                  <div class="place2-items3">
+                     <img src="images/location.svg" alt="location">
+                     <h5>Milan Cathedral</h5>
+                  </div>
+                  <span class="time-zone">7 Days - 6 Night</span>
+               </div>
+            </div>
+            <div class="place4" id="places">
+               <img src="images/place4.png" alt="place4">
+               <span class="price4">$260</span>
+               <div class="place4-items2">
+                  <div class="stars4">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+                  <div class="place4-items3">
+                     <img src="images/location.svg" alt="location">
+                     <h5>Venecia Burano</h5>
+                  </div>
+                  <span class="time-zone">7 Days - 6 Night</span>
+               </div>
+            </div>
+            <div class="place5" id="places">
+               <img src="images/place5.png" alt="place5">
+               <span class="price5">$280</span>
+               <div class="place5-items2">
+                  <div class="stars5">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+                  <div class="place5-items3">
+                     <img src="images/location.svg" alt="location">
+                     <h5>Tower of Pizza</h5>
+                  </div>
+                  <span class="time-zone">7 Days - 6 Night</span>
+               </div>
+            </div>
+            <div class="place6" id="places">
+               <img src="images/place6.png" alt="place6">
+               <span class="price5">$290</span>
+               <div class="place5-items2">
+                  <div class="stars5">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+                  <div class="place5-items3">
+                     <img src="images/location.svg" alt="location">
+                     <h5>Florence Uffizi</h5>
+                  </div>
+                  <span class="time-zone">7 Days - 6 Night</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="partners">
+         <div class="partners-item1">
+            <h2 id="partners-title">Our Partners</h2>
+         </div>
+            <div class="partners-item2">
+               <div class="partner1"><img src="images/partner1.svg" alt="partner1"></div>
+               <div class="partner1"><img src="images/partner2.svg" alt="partner2"></div>
+               <div class="partner1"><img src="images/partner3.svg" alt="partner3"></div>
+               <div class="partner1"><img src="images/partner4.svg" alt="partner4"></div>
+               <div class="partner1"><img src="images/partner5.svg" alt="partner4"></div>
+            </div>
+      </div>
+      <div class="contact">
+         <div class="contact-item1">
+            <span data-item="contact-item">Contact Us</span>
+            <h2 data-item="contact-item">If You Have Any Question Contact Us</h2>
+         </div>
+         <div class="contact-item2">
+            <form class="send-message" action="#">
+               <div class="form-item1">
+                  <input data-item="contact-item" class="your-name" type="text" name="name" placeholder="Name" required="required">
+                  <input data-item="contact-item" class="email" type="email" name="email" placeholder="Email" required="required">
+               </div>
+               <div class="form-item2">
+                  <input data-item="contact-item" class="subject" type="text" name="subject" placeholder="Subject" required="required">
+               </div>
+               <div class="form-item3">
+                  <textarea data-item="contact-item" class="message" name="message" rows="6" placeholder="Message" required="required"></textarea>
+               </div>
+               <div class="form-item4">
+                  <button data-item="contact-item" class="send" type="submit">Send Message</button>
+               </div>
+            </form>
+            <div class="contact-item3">
+               <div data-item="contact-item" class="content1">
+                  <div class="location-container">
+                     <img src="images/location.svg" alt="location" width="20px">
+                  </div>
+                  <p>New York, Times Square</p>
+               </div>
+               <div data-item="contact-item" class="content2">
+                  <div class="email-container">
+                     <img src="images/email.svg" alt="email" width="20px">
+                  </div>
+                  <p>help@Laravel.com</p>
+               </div>
+               <div data-item="contact-item" class="content3">
+                  <div class="support-container">
+                     <img src="images/support.svg" alt="support" width="20px">
+                  </div>
+                  <p>(+1) 720-345-3525</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="testimonials">
+         <div class="testimonials-item1">
+            <span data-testimonial="testimonial1">Testimonials</span>
+            <h2  data-testimonial="testimonial1">What Clients Say About Us</h2>
+         </div>
+         <div class="testimonials-item2">
+            <div class="client1">
+               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent bibendum dolor eros imperdiet amet hendrerit</p>
+               <img src="images/client1.png" alt="client1" width="160px">
+               <h2>Olivia</h2>
+               <div class="stars">
+                  <img src="images/star.svg" alt="star">
+                  <img src="images/star.svg" alt="star">
+                  <img src="images/star.svg" alt="star">
+                  <img src="images/star.svg" alt="star">
+                  <img src="images/star.svg" alt="star">
+               </div>
+            </div>
+               <div class="client2">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent bibendum dolor eros imperdiet amet hendrerit</p>
+                  <img src="images/client2.png" alt="client2" width="160px">
+                  <h2>Sophia</h2>
+                  <div class="stars">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+               </div>
+               <div class="client3">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent bibendum dolor eros imperdiet amet hendrerit</p>
+                  <img src="images/client3.png" alt="client3" width="160px">
+                  <h2>James</h2>
+                  <div class="stars">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+               </div>
+               <div class="client4">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent bibendum dolor eros imperdiet amet hendrerit</p>
+                  <img src="images/client4.png" alt="client4" width="160px">
+                  <h2>Oliver</h2>
+                  <div class="stars">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                     <img src="images/star.svg" alt="star">
+                  </div>
+               </div>
+         </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1839486564695!2d-73.9877312846703!3d40.75797874273849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2z0KLQsNC50LzRgSDRgdC60LLQtdGA!5e0!3m2!1sru!2s!4v1664963226678!5m2!1sru!2s" width="100%" height="600" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <footer class="footer">
+         <div class="footer-items">
+            <div class="footer-item1" data-footerItems="footerItems">
+               <a href="index.html">Laravel</a>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum .</p>
+            </div>
+               <div class="link-items">
+                  <div class="footer-item2" data-footerItems="footerItems">
+                     <div class="item2-title"><h3>Company</h3></div>
+                     <div class="item2-links">
+                        <a href="#">About</a>
+                        <a href="#">Team</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Privacy Policy</a>
+                     </div>
+                  </div>
+               <div class="footer-item3" data-footerItems="footerItems">
+                  <div class="item3-title"><h3>Locations</h3></div>
+                  <div class="item3-links">
+                     <a href="#">Rome</a>
+                     <a href="#">Florence</a>
+                     <a href="#">Venecia</a>
+                     <a href="#">Milan</a>
+                  </div>
+               </div>
+               <div class="footer-item4" data-footerItems="footerItems">
+                  <div class="item4-title"><h3>Social Media</h3></div>
+                  <div class="item4-links">
+                     <a href="#">Facebook</a>
+                     <a href="#">Twitter</a>
+                     <a href="#">Instagram</a>
+                     <a href="#">Youtube</a>
+                  </div>
+               </div>
+               </div>
+         </div>
+         <div class="footer-items2">
+            <p data-footerItems="footerItems">Copyright @ 2022 Laravel all right reserved.</p>
+            <div class="social-links" data-footerItems="footerItems">
+               <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+               <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+               <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+               <a href="#"><img src="images/youtube.svg" alt="You Tube"></a>
+            </div>
+         </div>
+      </footer>
+      <button class="top"><img src="images/top.svg" alt="top"></button>
+      <div class="preloader">
+         <img src="images/preloader.gif" alt="preloader">
+      </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

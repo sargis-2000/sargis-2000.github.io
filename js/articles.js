@@ -1,0 +1,537 @@
+let burger = document.querySelector('.burger');
+let line1 = document.querySelector('.line1');
+let line2 = document.querySelector('.line2');
+let line3 = document.querySelector('.line3');
+let menu = document.querySelector('.menu');
+
+burger.addEventListener('click', function() {
+   line1.classList.toggle('line1-rotate');
+   line2.classList.toggle('line2-rotate');  
+   line3.classList.toggle('line3-remove');
+   menu.classList.toggle('menu-show');
+});
+
+let signButton = document.querySelector('[data-sign="sign"]');
+let mbsign = document.querySelector('[data-mbsign="mb-sign"]');
+let signbox = document.querySelector('.sign');
+let close = document.querySelector('.close');
+
+signButton.addEventListener('click', function() {
+   signbox.classList.add('sign-show');
+   close.style.cursor = 'pointer';
+});
+close.addEventListener('click', function() {
+   signbox.classList.remove('sign-show');
+   close.style.cursor = 'default';
+});
+mbsign.addEventListener('click', function() {
+   signbox.classList.add('sign-show');
+});
+
+$(document).ready(function() {
+   $('.slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      slidesToShow: 1,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      pauseONDotsHover: false,
+      responsive: [
+         {
+            breakpoint: 980,
+            settings: {
+               arrows: false
+             }
+         }
+      ]
+   });
+});
+
+const likebtn1 = document.querySelector('[data-like1="like1"]');
+let likeNum1 = document.querySelector('[data-likeNum1="likeNum1"]');
+let likeIcon1 = document.querySelector('#like-icon1');
+let clicked1 = false;
+
+likebtn1.addEventListener('click', () => {
+   if(!clicked1) {
+      clicked1 = true;
+      likeNum1.textContent++;
+      likeIcon1.src = 'images/like.svg';
+   } else {
+      clicked1 = false;
+      likeNum1.textContent--;
+      likeIcon1.src = 'images/like-disabled.svg';
+   }
+});
+
+const likebtn2 = document.querySelector('[data-like2="like2"]');
+let likeNum2 = document.querySelector('[data-likeNum2="likeNum2"]');
+let likeIcon2 = document.querySelector('#like-icon2');
+let clicked2 = false;
+
+likebtn2.addEventListener('click', () => {
+   if(!clicked2) {
+      clicked2 = true;
+      likeNum2.textContent++;
+      likeIcon2.src = 'images/like.svg';
+   } else {
+      clicked2 = false;
+      likeNum2.textContent--;
+      likeIcon2.src = 'images/like-disabled.svg';
+   }
+});
+
+const likebtn3 = document.querySelector('[data-like3="like3"]');
+let likeNum3 = document.querySelector('[data-likeNum3="likeNum3"]');
+let likeIcon3 = document.querySelector('#like-icon3');
+let clicked3 = false;
+
+likebtn3.addEventListener('click', () => {
+   if(!clicked3) {
+      clicked3 = true;
+      likeNum3.textContent++;
+      likeIcon3.src = 'images/like.svg';
+   } else {
+      clicked3 = false;
+      likeNum3.textContent--;
+      likeIcon3.src = 'images/like-disabled.svg';
+   }
+});
+
+const likebtn4 = document.querySelector('[data-like4="like4"]');
+let likeNum4 = document.querySelector('[data-likeNum4="likeNum4"]');
+let likeIcon4 = document.querySelector('#like-icon4');
+let clicked4 = false;
+
+likebtn4.addEventListener('click', () => {
+   if(!clicked4) {
+      clicked4 = true;
+      likeNum4.textContent++;
+      likeIcon4.src = 'images/like.svg';
+   } else {
+      clicked4 = false;
+      likeNum4.textContent--;
+      likeIcon4.src = 'images/like-disabled.svg';
+   }
+});
+
+const likebtn5 = document.querySelector('[data-like5="like5"]');
+let likeNum5 = document.querySelector('[data-likeNum5="likeNum5"]');
+let likeIcon5 = document.querySelector('#like-icon5');
+let clicked5 = false;
+
+likebtn5.addEventListener('click', () => {
+   if(!clicked5) {
+      clicked5 = true;
+      likeNum5.textContent++;
+      likeIcon5.src = 'images/like.svg';
+   } else {
+      clicked5 = false;
+      likeNum5.textContent--;
+      likeIcon5.src = 'images/like-disabled.svg';
+   }
+});
+
+const likebtn6 = document.querySelector('[data-like6="like6"]');
+let likeNum6 = document.querySelector('[data-likeNum6="likeNum6"]');
+let likeIcon6 = document.querySelector('#like-icon6');
+let clicked6 = false;
+
+likebtn6.addEventListener('click', () => {
+   if(!clicked6) {
+      clicked6 = true;
+      likeNum6.textContent++;
+      likeIcon6.src = 'images/like.svg';
+   } else {
+      clicked6 = false;
+      likeNum6.textContent--;
+      likeIcon6.src = 'images/like-disabled.svg';
+   }
+});
+
+let options0 = {
+   threshold: 0.5
+}
+
+let show0 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry;
+
+      if(isIntersecting) {
+         target.style.opacity = '1';
+      }
+   });
+}
+
+let observer0 = new IntersectionObserver(show0, options0);
+let articles = document.querySelectorAll('[data-article="article"]');
+articles.forEach(items => {
+   observer0.observe(items);
+});
+
+let options1 = {
+   threshold: 1
+}
+
+let change1 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry
+
+      if(isIntersecting) {
+         let num1 = 0;
+         let interval;
+
+         interval = setInterval(function() {
+            num1 += 25;
+            target.innerHTML = num1;
+
+            if(num1 == 32000) {
+               clearInterval(interval);
+            }
+            observer.unobserve(target);
+         });
+      }
+   });
+}
+
+let observer = new IntersectionObserver(change1, options1);
+let clientnum = document.querySelector('#num1');
+observer.observe(clientnum);
+
+let options2 = {
+   threshold: 1
+}
+
+let change2 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry;
+
+      if(isIntersecting) {
+         let num2 = 0;
+         let interval;
+
+         interval = setInterval(function() {
+            num2 += 25;
+            target.innerHTML = num2;
+
+            if(num2 == 32200) {
+               clearInterval(interval);
+            }
+            observer2.unobserve(target);
+         });
+      }
+   });
+}
+
+let observer2 = new IntersectionObserver(change2, options2);
+let tournum = document.querySelector('#num2');
+observer2.observe(tournum);
+
+let options3 = {
+   threshold: 1
+}
+
+let change3 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry;
+
+      if(isIntersecting) {
+        let num3 = 0;
+        let interval;
+
+        interval = setInterval(function() {
+           num3 += 25;
+           target.innerHTML = num3;
+
+           if(num3 == 10000) {
+            clearInterval(interval);
+           }
+           observer3.unobserve(target);
+        });
+      }
+   });
+}
+
+let observer3 = new IntersectionObserver(change3, options3);
+let businessnum = document.querySelector('#num3');
+observer3.observe(businessnum);
+
+let options4 = {
+   threshold: 1
+}
+
+let change4 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry;
+
+      if(isIntersecting) {
+
+         let num4 = 0;
+         let interval;
+
+         interval = setInterval(function() {
+            num4 += 25;
+            target.innerHTML = num4;
+
+            if(num4 == 5000) {
+               clearInterval(interval);
+            }
+            observer4.unobserve(target);
+         });
+      }
+   });
+}
+
+let observer4 = new IntersectionObserver(change4, options4);
+let supportnum = document.querySelector('#num4');
+observer4.observe(supportnum);
+
+let options10 = {
+   threshold: 0.1
+}
+
+let show6 = function(entries) {
+   entries.forEach(entry => {
+       let{target, isIntersecting} = entry;
+
+       if(isIntersecting) {
+         target.style.opacity = '1';
+       }
+   });
+}
+
+let observer10 = new IntersectionObserver(show6, options10);
+let statistics = document.querySelector('.statistics');
+observer10.observe(statistics);
+
+let options11 = {
+   threshold: 1
+}
+
+let show7 = function(entries) {
+   entries.forEach(entry => {
+       let{target, isIntersecting} = entry;
+
+       if(isIntersecting) {
+         target.style.opacity = '1';
+       }
+   });
+}
+
+let observer11 = new IntersectionObserver(show7, options11);
+let statisticsitem = document.querySelector('.statistics-item1');
+observer11.observe(statisticsitem);
+
+$(document).ready(function() {
+   $('.partners-item2').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      dots: true,
+      variableWidth: true,
+      responsive: [
+         {
+            breakpoint: 1121,
+            settings: {
+               arrows: false,
+            }
+         },
+         {
+            breakpoint: 980,
+            settings: {
+               slidesToShow: 3,
+               arrows: false,
+            }
+         },
+         {
+            breakpoint: 685,
+            settings: {
+               slidesToShow: 2,
+               arrows: false,
+            }
+         },
+         {
+            breakpoint: 475,
+            settings: {
+               slidesToShow: 1,
+               arrows: false,
+            }
+         }
+      ]
+   });
+});
+
+let options14 = {
+   threshold: 0.1
+}
+
+let show10 = function(entries) {
+   entries.forEach(entry => {
+      let{target,isIntersecting} = entry;
+
+      if(isIntersecting) {
+         target.style.opacity = '1';
+      }
+   });
+}
+
+let observer14 = new IntersectionObserver(show10, options14);
+let partners = document.querySelector('.partners');
+observer14.observe(partners);
+
+let options15 = {
+   threshold: 1
+}
+
+let show11 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry;
+
+      if(isIntersecting) {
+         target.style.opacity = '1';
+      }
+   });
+}
+
+let observer15 = new IntersectionObserver(show11,options15);
+let partnerstitle = document.querySelector('#partners-title');
+observer15.observe(partnerstitle);
+
+$(document).ready(function() {
+   $('.testimonials-item2').slick({
+      infinite: true,
+      slidesToShow: 3,
+      autoplay: true,
+      speed: 150,
+      autoplaySpeed: 5000,
+      dots: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      centerMode: true,
+      variableWidth: true,
+      responsive: [
+         {
+            breakpoint: 1354,
+            settings: {
+               arrows: false,
+            }
+         },
+         {
+            breakpoint: 1273,
+            settings: {
+               arrows: false,
+               slidesToShow: 2,
+               centerMode: false,
+            }
+         },
+         {
+            breakpoint: 1273,
+            settings: {
+               arrows: false,
+               slidesToShow: 1,
+               centerMode: false,
+            }
+         }
+      ]
+   });
+});
+
+let options17 = {
+   threshold: 0.1
+}
+
+let show13 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry;
+
+      if(isIntersecting) {
+         target.style.opacity = '1';
+      }
+   });
+}
+
+let observer17 = new IntersectionObserver(show13, options17);
+let testimonials = document.querySelector('.testimonials');
+observer17.observe(testimonials);
+
+let options18 = {
+   threshold: 1
+}
+
+let show14 = function(entries) {
+   entries.forEach(entry => {
+      let{target,isIntersecting} = entry;
+
+      if(isIntersecting) {
+         target.style.opacity = '1';
+      }
+   });
+}
+
+let observer18 = new IntersectionObserver(show14, options18);
+let testimonial1 = document.querySelectorAll('[data-testimonial="testimonial1"]');
+testimonial1.forEach(items => {
+   observer18.observe(items);
+});
+
+let options19 = {
+   threshold: 1
+}
+
+let show15 = function(entries) {
+   entries.forEach(entry => {
+      let{target, isIntersecting} = entry;
+
+      if(isIntersecting) {
+         target.style.opacity = '1';
+      }
+   });
+}
+
+let observer19 = new IntersectionObserver(show15, options19);
+let footerItems = document.querySelectorAll('[ data-footerItems="footerItems"]');
+footerItems.forEach(items => {
+   observer19.observe(items);
+});
+
+let options20 = {
+   threshold: 1
+}
+
+let show20 = function(entries) {
+   entries.forEach(entry => {
+      let{isIntersecting} = entry;
+
+      if(!isIntersecting) {
+        topBtn.style.transform = 'translateX(0)';
+      } else {
+         topBtn.removeAttribute('style');
+      }
+   });
+}
+
+let observer20 = new IntersectionObserver(show20,options20);
+let nav = document.querySelector('.nav');
+let topBtn = document.querySelector('.top');
+observer20.observe(nav);
+
+topBtn.addEventListener('click', function() {
+   setTimeout(function() {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth"
+      });
+   },300)
+});
+
+window.onload = function() {
+   let preloader = document.querySelector('.preloader');
+   preloader.classList.add('preloader-hide');
+}
