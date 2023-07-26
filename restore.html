@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Восстановление пароля</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;500;600;700;800;900&family=Lato:wght@700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
+    <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/payment.css">
+</head>
+<body>
+    <div class="restore-popup">
+        <header class="header">
+                <div class="header-top">
+                    <a class="header-top__prev" href="#">
+                        <img src="./images/psychology/prev-icon.png" alt="icon">
+                    </a>
+                </div>
+        </header>
+        <div class="titles restore-titles">
+            <h1 class="title restore-title">Восстановление пароля</h1>
+            <p class="text restore-text">Укажите электронную почту, которую вы указывали 
+                при регистрации и мы пришлем вам новый пароль
+            </p>
+        </div>
+        <div class="form-wrapper">
+            <form action="#">
+                <ul class="form-items restore-items">
+                    <li class="form-items__item">
+                        <div class="input-wrapper">
+                            <input class="form-items__input" type="email" name="email">
+                            <label>Электронная почта</label>
+                        </div>
+                        <button class="form-items__left-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10.5898 12.5205C10.4021 12.6277 10.1877 12.6813 10 12.6813C9.81233 12.6813 9.59786 12.6277 9.41019 12.5205L0 6.7832V14.424C0 16.0593 1.31367 17.373 2.94906 17.373H17.0509C18.6863 17.373 20 16.0593 20 14.424V6.7832L10.5898 12.5205Z" fill="#CCCCCC"></path>
+                                <path d="M17.0508 2.62695H2.94895C1.55485 2.62695 0.375228 3.61891 0.0803223 4.93258L9.99989 10.9916L19.9195 4.93258C19.6246 3.61891 18.4449 2.62695 17.0508 2.62695Z" fill="#CCCCCC"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <button class="btn-top restore-btn" type="submit">
+                    восстановить пароль
+                </button>
+                <a class="cancel" href="login.html">
+                    назад
+                </a>
+            </form>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+</html>
