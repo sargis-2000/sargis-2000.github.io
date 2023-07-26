@@ -1,0 +1,29 @@
+.main-content {
+    &__top {
+        margin-bottom: 50px;
+        @media (max-width: 788px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__title {
+        font-family: Lobster;
+        font-size: 28px;
+        color: $font-color5;
+        font-weight: $font-weight;
+        line-height: 100%;
+    }
+    &__text {
+        display: block;
+        margin-bottom: 1px;
+        font-size: $font-size2;
+        font-weight: $font-weight;
+        color: #979797;
+    }
+    &__middle {
+        display: flex;
+        column-gap: 50px;
+        @media (max-width: 788px) {
+            flex-direction: column-reverse;
+        }
+    }
+}

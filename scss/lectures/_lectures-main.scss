@@ -1,0 +1,303 @@
+.content-left {
+    @media (max-width: 788px) {
+        margin-bottom: 0;
+    }
+}
+.header-top {
+    justify-content: unset;
+    column-gap: 57px;
+    @media (max-width: 1037px) {
+        justify-content: space-between;
+        column-gap: unset;
+    }
+}
+.main-content {
+    &__middle {
+        column-gap: 90px;
+        @media (max-width: 788px) {
+            flex-direction: column-reverse;
+        }
+    }
+}
+.lectures {
+    &__title {
+        font-size: 28px;
+        font-weight: 400;
+        font-family: Lobster;
+        line-height: 110%;
+        color: $font-color5;
+        @media (max-width: 788px) {
+            text-align: center;
+        }
+    }
+    &__text {
+        display: block;
+        font-size: 14px;
+        color: #979797;
+        font-weight: 400;
+        margin-bottom: 16px;
+        @media (max-width: 788px) {
+            text-align: center;
+        }
+    }
+}
+.lectures-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+    @media (max-width: 788px) {
+        row-gap: 30px;
+    }
+    &__link {
+        position: relative;
+        display: block;
+        font-size: 0;
+    }
+    &__img {
+        border-radius: $border-radius2;
+        width: 100%;
+    }
+    &__end {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 9px;
+        font-family: Lato;
+        font-weight: 700;
+        background-color: $accent-color3;
+        padding: 7px 5px 7px 9px;
+        border-radius: 20px;
+        color: #464646;
+    }
+}
+.end-date {
+    padding: 7px 10px 7px 9px;
+}
+.yoga {
+    &__article {
+        margin-bottom: 47px;
+    }
+    &__title {
+        font-family: Lobster;
+        font-size: 28px;
+        font-weight: 400;
+        color: $font-color5;
+        line-height: 110%;
+        @media (max-width: 1037px) {
+            text-align: center;
+        }
+    }
+    &__img {
+        border-radius: 30px;
+    }
+    &__text {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        color: #979797;
+        margin-bottom: 18px;
+        @media (max-width: 1037px) {
+            text-align: center;
+        }
+    }
+    &__link {
+        display: block;
+        font-size: 0;
+        img {
+            width: 100%;
+        }
+    }
+}
+.materials-text2 {
+    max-width: 109px;
+}
+.work-materials {
+    @media (max-width: 788px) {
+        display: none;
+    }
+    &__list {
+        display: flex;
+        column-gap: 20px;
+        @media (max-width: 788px) {
+            justify-content: unset;
+        }
+    }
+    &__item {
+        flex: 1;
+    }
+    &__title {
+        font-family: Lobster;
+        font-size: 25px;
+        font-weight: $font-weight;
+        margin-bottom: 28px;
+        color: $font-color5;
+        @media (max-width: 788px) {
+            text-align: center;
+        }
+    }
+    &__link {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        min-width: 165px;
+        min-height: 165px;
+        background-color: $accent-color3;
+        border-radius: $border-radius2;
+        font-size: 15px;
+        font-weight: $font-weight;
+        color: #464646;
+        transition: .3s ease-out;
+        @media (max-width: 788px) {
+            min-width: unset;
+        }
+        path {
+            transition: .3s ease-out;
+        }
+        svg {
+            position: relative;
+            z-index: 1;
+        }
+        &::before {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(180deg, #FF8B20 0%, #FF7D04 100%);
+            border-radius: inherit;
+            opacity: 0;
+            transition: .3s ease-out;
+        }
+        &:hover path {
+            stroke: $accent-color3;
+            transition: .3s ease-out;
+        }
+        &:hover {
+            color: $accent-color3;
+            transition: .3s ease-out;
+        }
+        &:hover::before {
+            opacity: unset;
+            transition: .3s ease-out;
+        } 
+    }
+    &__text {
+        position: relative;
+        z-index: 1;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+.lectures-link {
+    row-gap: 14px;
+}
+.materials-link {
+    row-gap: 18px;
+}
+.live {
+    margin-top: 34px;
+    @media (max-width: 788px) {
+        margin-top: 54px;
+    }
+    &__title {
+        font-size: 28px;
+        font-weight: 400;
+        font-family: Lobster;
+        color: $font-color5;
+        line-height: 110%;
+        @media (max-width: 788px) {
+            text-align: center;
+        }
+    }
+    &__text {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        color: #979797;
+        margin-bottom: 28px;
+        @media (max-width: 788px) {
+            text-align: center;
+        }
+    }
+}
+.live-items {
+    max-width: 777px;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 11px;
+    overflow-x: auto;
+    padding: 0 20px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &__link {
+        display: block;
+        font-size: 0;
+        text-align: center;
+    }
+    &__item {
+        flex-shrink: 0;
+    }
+    &__img {
+        border-radius: 30px;
+        margin-bottom: 13px;
+    }
+    &__text {
+        display: block;
+        font-family: Lato;
+        font-size: 12.482px;
+        font-weight: $font-weight2;
+        color: #454545;
+    }
+}
+.mobile-materials {
+    display: none;
+    margin-top: 72px;
+    padding: 0 20px;
+    @media (max-width: 788px) {
+        display: block;
+    }
+}
+.article {
+    position: relative;
+    &__text {
+        font-size: 13px;
+        color: #464646;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+    &__content {
+        display: none;
+        padding: 21px 12px 21px 25px;
+        background-color: $accent-color3;
+        @media (max-width: 788px) {
+            display: block;
+            border-radius: 0px 0px 15px 15px;
+        }
+    }
+    &__link {
+        max-width: 165px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 11px;
+        padding: 10px 17px;
+        background-color: #CBCBCB;
+        border-radius: 23.405px;
+        font-size: 11px;
+        color: $accent-color3;
+    }
+    &__img {
+        width: 100%;
+        border-radius: 30px;
+        @media (max-width: 788px) {
+            border-radius: 30px 30px 0px 0px;
+        }
+    }
+}
