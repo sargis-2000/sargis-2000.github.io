@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
     <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/personal-data.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="wrapper">
@@ -277,7 +277,10 @@
                                                             <img src="./images/personal-date/country-icon.png" alt="icon">
                                                             <img src="./images/personal-date/arrow-down.png" alt="icon">
                                                         </button>
-                                                        <span class="tel">Номер телефона</span>
+                                                        <div class="input-wrapper">
+                                                            <input class="personal-date__input" type="tel" name="tel">
+                                                            <label>Номер телефона</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -332,7 +335,9 @@
                                             </button>
                                         </li>
                                     </ul>
-                                    <button class="content-left__save" type="submit">сохранить изменения</button>   
+                                    <button class="content-left__save" type="submit">
+                                        <span>сохранить изменения</span>
+                                    </button>   
                                 </form>
                             </div>
                             <div class="content-right">

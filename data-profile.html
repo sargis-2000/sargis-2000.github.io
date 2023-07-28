@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
     <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/personal-data.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="wrapper">
@@ -175,7 +175,7 @@
         </aside>
         <main class="main">
             <div class="main-wrapper">
-                <header class="header">
+                <header class="header data-profile-header">
                     <div class="container">
                         <div class="header-top">
                             <a class="header-top__prev" href="#">
@@ -213,9 +213,6 @@
                 </header>
                 <div class="main-content">
                     <div class="container">
-                        <div class="main-content__top">
-                            <h2 class="main-content__title">Личные данные</h2>
-                        </div>
                         <div class="main-content__middle">
                             <ul class="right-items">
                                 <li class="right-items__item item-active personal-item">
@@ -285,7 +282,10 @@
                                                             <img src="./images/personal-date/country-icon.png" alt="icon">
                                                             <img src="./images/personal-date/arrow-down.png" alt="icon">
                                                         </button>
-                                                        <span class="tel">Номер телефона</span>
+                                                        <div class="input-wrapper">
+                                                            <input class="personal-date__input" type="tel" name="tel">
+                                                            <label>Номер телефона</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -340,7 +340,9 @@
                                             </button>
                                         </li>
                                     </ul>
-                                    <button class="content-left__save" type="submit">сохранить изменения</button>   
+                                    <button class="content-left__save" type="submit">
+                                        <span>сохранить изменения</span>
+                                    </button>   
                                     <button class="content-left__cancel">отмена</button>
                                 </form>
                             </div>
