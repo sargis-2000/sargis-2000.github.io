@@ -175,12 +175,14 @@
         </aside>
         <main class="main">
             <div class="main-wrapper">
-                <header class="header">
+                <header class="header profile-header">
                     <div class="container">
                         <div class="header-top">
-                            <a class="header-top__prev" href="#">
-                                <img src="./images/psychology/prev-icon.png" alt="icon">
-                            </a>
+                            <div class="header-top__start">
+                                <a class="header-top__prev" href="#">
+                                    <img src="./images/psychology/prev-icon.png" alt="icon">
+                                </a>
+                            </div>
                             <div class="header-top__inner">
                                 <form class="header-top__form" action="#">
                                     <div class="header-top__wrapper">
@@ -220,9 +222,9 @@
                         <div class="profile-change">
                             <div class="profile-change__img">
                                 <img src="./images/main/profile-img-big.png" alt="icon">
-                                <a href="#" class="change">
+                                <button class="change profile-change">
                                     <img class="change__icon" src="./images/personal-date/change-icon.png" alt="icon">
-                                </a>
+                                </button>
                             </div>
                             <strong class="profile-change__name">Вадим Семилетов</strong>
                             <span class="profile-change__mail">9225647@mail.ru</span>
@@ -363,5 +365,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/profile-popup.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;500;600;700;800;900&family=Lato:wght@700&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
     <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -251,11 +252,11 @@
                                         <li class="personal-date__item">
                                             <div class="personal-date__left">
                                                 <div class="input-wrapper">
-                                                    <input class="personal-date__input" type="text" name="date">
+                                                    <input class="personal-date__input" type="text" name="date" id="date">
                                                     <label>Дата рождение</label>
                                                 </div>
                                             </div>
-                                            <button class="personal-date__left-btn" type="button">
+                                            <button class="personal-date__left-btn" type="button" id="date-btn">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                     <g clip-path="url(#clip0_3048_132)">
                                                     <path d="M16.5624 2.49967H14.9999V1.66634C14.9999 1.44533 14.9121 1.23337 14.7558 1.07709C14.5996 0.920805 14.3876 0.833008 14.1666 0.833008C13.9456 0.833008 13.7336 0.920805 13.5773 1.07709C13.421 1.23337 13.3333 1.44533 13.3333 1.66634V2.49967H10.8333V1.66634C10.8333 1.44533 10.7455 1.23337 10.5892 1.07709C10.4329 0.920805 10.2209 0.833008 9.99992 0.833008C9.7789 0.833008 9.56694 0.920805 9.41066 1.07709C9.25438 1.23337 9.16659 1.44533 9.16659 1.66634V2.49967H6.66659V1.66634C6.66659 1.44533 6.57879 1.23337 6.42251 1.07709C6.26623 0.920805 6.05427 0.833008 5.83325 0.833008C5.61224 0.833008 5.40028 0.920805 5.244 1.07709C5.08772 1.23337 4.99992 1.44533 4.99992 1.66634V2.49967H3.43742C2.74702 2.50056 2.08515 2.77521 1.59697 3.26339C1.10878 3.75158 0.834134 4.41344 0.833252 5.10384V7.49967H19.1666V5.10384C19.1657 4.41344 18.8911 3.75158 18.4029 3.26339C17.9147 2.77521 17.2528 2.50056 16.5624 2.49967Z" fill="#CCCCCC"/>
@@ -382,6 +383,9 @@
             </div>
         </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/personal.js"></script>
     <script src="./js/menu.js"></script>
 </body>

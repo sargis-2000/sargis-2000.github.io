@@ -175,7 +175,7 @@
         </aside>
         <main class="main">
             <div class="main-wrapper">
-                <header class="header">
+                <header class="header personally-header">
                     <div class="container">
                         <div class="header-top">
                             <button class="burger-btn">
@@ -225,9 +225,9 @@
                                     <img src="./images/personally/personally-icon1.svg" alt="img">
                                 </div>
                                 <div class="personally-cards__right">
-                                    <h1 class="personally-cards__title">Материалы месяца</h1>
+                                    <h3 class="personally-cards__title">Материалы месяца</h3>
                                     <p class="personally-cards__text">Здесь сохраняются записи прошедших практик и показываются темы будущих. Изучайте расписание и создавайте оптимальный для себя режим занятий</p>
-                                    <button class="personally-cards__btn">Показать</button>
+                                    <button class="personally-cards__btn" data-popup="popup1">Показать</button>
                                 </div>
                             </li>
                             <li class="personally-cards__item">
@@ -235,9 +235,9 @@
                                     <img src="./images/personally/personally-icon2.svg" alt="img">
                                 </div>
                                 <div class="personally-cards__right">
-                                    <h1 class="personally-cards__title">Ключи роста</h1>
+                                    <h3 class="personally-cards__title">Ключи роста</h3>
                                     <p class="personally-cards__text">Здесь сохраняются записи прошедших практик и показываются темы будущих. Изучайте расписание и создавайте оптимальный для себя режим занятий</p>
-                                    <button class="personally-cards__btn">Показать</button>
+                                    <button class="personally-cards__btn" data-popup="popup2">Показать</button>
                                 </div>
                             </li>
                             <li class="personally-cards__item">
@@ -245,15 +245,61 @@
                                     <img src="./images/personally/personally-icon3.svg" alt="img">
                                 </div>
                                 <div class="personally-cards__right">
-                                    <h1 class="personally-cards__title">Важные ссылки</h1>
+                                    <h3 class="personally-cards__title">Важные ссылки</h3>
                                     <p class="personally-cards__text">Здесь сохраняются записи прошедших практик и показываются темы будущих. Изучайте расписание и создавайте оптимальный для себя режим занятий</p>
-                                    <button class="personally-cards__btn">Показать</button>
+                                    <button class="personally-cards__btn" data-popup="popup3">Показать</button>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="personally-popup">
+                <div class="personally-popup popup1">
+                    <div class="personally-popup__item">
+                        <button class="personally-popup__close">
+                            <img src="./images/personally/popup-close-icon.png" alt="icon">
+                        </button>
+                        <div class="personally-popup__top">
+                            <img src="./images/personally/personally-popup-icon.svg" alt="icon">
+                            <p>Материалы месяца</p>
+                        </div>
+                        <p class="text">
+                            Здесь сохраняются записи прошедших практик и показываются темы будущих. Изучайте расписание и создавайте оптимальный для себя режим занятий
+                        </p>
+                        <ul class="popup-cards">
+                            <li class="popup-cards__item">
+                                <div class="popup-cards__left">
+                                    <img src="./images/personally/popup-card-icon1.svg" alt="icon">
+                                </div>
+                                <div class="popup-cards__right">
+                                    <h3 class="popup-cards__title">Астрология</h3>
+                                    <p class="popup-cards__text">Ознакомиться с прошедшими эфирами по астрологии и материалами для построения натальной карты вы можете в разделе "Введение в астрологию". Также внутри доступен полный астрологический прогноз на 2023 год.</p>
+                                    <a class="popup-cards__link" href="#">Перейти</a>
+                                </div>
+                            </li>
+                            <li class="popup-cards__item">
+                                <div class="popup-cards__left">
+                                    <img src="./images/personally/popup-card-icon2.svg" alt="icon">
+                                </div>
+                                <div class="popup-cards__right">
+                                    <h3 class="popup-cards__title">Йога и её возможности</h3>
+                                    <p class="popup-cards__text">Ознакомиться с прошедшими эфирами по астрологии и материалами для построения натальной карты вы можете в разделе "Введение в астрологию". Также внутри доступен полный астрологический прогноз на 2023 год.</p>
+                                    <a class="popup-cards__link" href="#">Перейти</a>
+                                </div>
+                            </li>
+                            <li class="popup-cards__item">
+                                <div class="popup-cards__left">
+                                    <img src="./images/personally/popup-card-icon3.svg" alt="icon">
+                                </div>
+                                <div class="popup-cards__right">
+                                    <h3 class="popup-cards__title">Астрология</h3>
+                                    <p class="popup-cards__text">Ознакомиться с прошедшими эфирами по астрологии и материалами для построения натальной карты вы можете в разделе "Введение в астрологию". Также внутри доступен полный астрологический прогноз на 2023 год.</p>
+                                    <a class="popup-cards__link" href="#">Перейти</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="personally-popup popup2">
                     <div class="personally-popup__item">
                         <button class="personally-popup__close">
                             <img src="./images/personally/popup-close-icon.png" alt="icon">
@@ -299,10 +345,57 @@
                         </ul>
                     </div>
                 </div>
+                <div class="personally-popup popup3">
+                    <div class="personally-popup__item">
+                        <button class="personally-popup__close">
+                            <img src="./images/personally/popup-close-icon.png" alt="icon">
+                        </button>
+                        <div class="personally-popup__top">
+                            <img src="./images/personally/personally-popup-icon.svg" alt="icon">
+                            <p>Важные ссылки</p>
+                        </div>
+                        <p class="text">
+                            Здесь сохраняются записи прошедших практик и показываются темы будущих. Изучайте расписание и создавайте оптимальный для себя режим занятий
+                        </p>
+                        <ul class="popup-cards">
+                            <li class="popup-cards__item">
+                                <div class="popup-cards__left">
+                                    <img src="./images/personally/popup-card-icon1.svg" alt="icon">
+                                </div>
+                                <div class="popup-cards__right">
+                                    <h3 class="popup-cards__title">Астрология</h3>
+                                    <p class="popup-cards__text">Ознакомиться с прошедшими эфирами по астрологии и материалами для построения натальной карты вы можете в разделе "Введение в астрологию". Также внутри доступен полный астрологический прогноз на 2023 год.</p>
+                                    <a class="popup-cards__link" href="#">Перейти</a>
+                                </div>
+                            </li>
+                            <li class="popup-cards__item">
+                                <div class="popup-cards__left">
+                                    <img src="./images/personally/popup-card-icon2.svg" alt="icon">
+                                </div>
+                                <div class="popup-cards__right">
+                                    <h3 class="popup-cards__title">Йога и её возможности</h3>
+                                    <p class="popup-cards__text">Ознакомиться с прошедшими эфирами по астрологии и материалами для построения натальной карты вы можете в разделе "Введение в астрологию". Также внутри доступен полный астрологический прогноз на 2023 год.</p>
+                                    <a class="popup-cards__link" href="#">Перейти</a>
+                                </div>
+                            </li>
+                            <li class="popup-cards__item">
+                                <div class="popup-cards__left">
+                                    <img src="./images/personally/popup-card-icon3.svg" alt="icon">
+                                </div>
+                                <div class="popup-cards__right">
+                                    <h3 class="popup-cards__title">Астрология</h3>
+                                    <p class="popup-cards__text">Ознакомиться с прошедшими эфирами по астрологии и материалами для построения натальной карты вы можете в разделе "Введение в астрологию". Также внутри доступен полный астрологический прогноз на 2023 год.</p>
+                                    <a class="popup-cards__link" href="#">Перейти</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
     <script src="./js/menu.js"></script>
     <script src="./js/personally.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -175,9 +175,11 @@
                 <header class="header">
                     <div class="container">
                         <div class="header-top">
-                           <a class="header-top__prev" href="#">
-                                <img src="./images/psychology/prev-icon.png" alt="icon">
-                           </a>
+                            <div class="header-top__start">
+                                <a class="header-top__prev" href="#">
+                                    <img src="./images/psychology/prev-icon.png" alt="icon">
+                                </a>
+                            </div>
                             <div class="header-top__inner">
                                 <form class="header-top__form" action="#">
                                     <div class="header-top__wrapper">
@@ -269,7 +271,7 @@
                                 </div>            
                                 <ul class="materials">
                                     <li class="materials__item">
-                                        <button class="materials__btn">
+                                        <button class="materials__btn" data-btn="lectures">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                                 <g clip-path="url(#clip0_2900_282)">
                                                 <mask id="mask0_2900_282" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
@@ -297,7 +299,7 @@
                                         </button>
                                     </li>
                                     <li class="materials__item">
-                                        <button class="materials__btn">
+                                        <button class="materials__btn" data-btn="materials-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                                                 <path d="M28.7111 5.28856V3.69189C28.7111 3.03228 28.1175 2.53144 27.4673 2.6424L6.88599 6.15629" stroke="#FF922D" stroke-width="0.996094" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M5.28882 30.3083V32.4377C5.28882 33.0256 5.76548 33.5023 6.35344 33.5023H27.6463C28.2342 33.5023 28.7109 33.0256 28.7109 32.4377V14.1182" stroke="#FF922D" stroke-width="0.996094" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -423,7 +425,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="psychology-popup">
+                        <div class="psychology-popup materials-popup">
                             <div class="psychology-popup__item">
                                 <button class="psychology-popup__close">
                                     <img src="./images/personally/popup-close-icon.png" alt="icon">
@@ -469,10 +471,59 @@
                                 </ul>
                             </div>
                         </div>
+
+                        <div class="psychology-popup lectures">
+                            <div class="psychology-popup__item">
+                                <button class="psychology-popup__close">
+                                    <img src="./images/personally/popup-close-icon.png" alt="icon">
+                                </button>
+                                <div class="psychology-popup__top">
+                                    <img src="./images/psychology/psychology-popup-icon.svg" alt="icon">
+                                    <h3 class="psychology-popup__title">Конспект лекции</h3>
+                                </div>
+                                <p>
+                                    Посвящая много времени близким, мы склонны забывать о себе. 
+                                </p>
+                                <ul class="popup-materials">
+                                    <li class="popup-materials__item">
+                                        <div class="popup-materials__left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                                <circle cx="6.5" cy="6.5" r="5.5" stroke="#FF922D" stroke-width="2"/>
+                                            </svg>
+                                            <img src="./images/psychology/popup-line.png" alt="line">
+                                        </div>
+                                        <div class="popup-materials__right">
+                                            <h3 class="popup-materials__title">Молитва 1</h3>
+                                            <p class="popup-materials__text">
+                                                Посвящая много времени
+                                            </p>
+                                            <a class="popup-materials__link" href="#">Скачать</a>
+                                        </div>
+                                    </li>
+                                    <li class="popup-materials__item">
+                                        <div class="popup-materials__left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                                <circle cx="6.5" cy="6.5" r="5.5" stroke="#CBCBCB" stroke-width="2"/>
+                                            </svg>
+                                            <img class="line2" src="./images/psychology/popup-line.png" alt="line">
+                                        </div>
+                                        <div class="popup-materials__right">
+                                            <h3 class="popup-materials__title"></h3>
+                                            <p class="popup-materials__text">
+                                                Посвящая много времени
+                                            </p>
+                                            <a class="popup-materials__link" href="#">Скачать</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/psychology-popup.js"></script>
 </body>
 </html>
