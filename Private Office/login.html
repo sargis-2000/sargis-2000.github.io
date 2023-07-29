@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;500;600;700;800;900&family=Lato:wght@700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
+    <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="login-page">
+    <div class="login-popup">
+        <div class="titles">
+            <h1 class="title">Закрытый клуб Алины Гесс</h1>
+            <p class="text">место роста и развития</p>
+        </div>
+        <div class="form-wrapper">
+            <form action="#">
+                <ul class="form-items">
+                    <li class="form-items__item">
+                        <div class="input-wrapper">
+                            <input class="form-items__input" type="email" name="email">
+                            <label>Электронная почта</label>
+                        </div>
+                        <button class="form-items__left-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10.5898 12.5205C10.4021 12.6277 10.1877 12.6813 10 12.6813C9.81233 12.6813 9.59786 12.6277 9.41019 12.5205L0 6.7832V14.424C0 16.0593 1.31367 17.373 2.94906 17.373H17.0509C18.6863 17.373 20 16.0593 20 14.424V6.7832L10.5898 12.5205Z" fill="#CCCCCC"></path>
+                                <path d="M17.0508 2.62695H2.94895C1.55485 2.62695 0.375228 3.61891 0.0803223 4.93258L9.99989 10.9916L19.9195 4.93258C19.6246 3.61891 18.4449 2.62695 17.0508 2.62695Z" fill="#CCCCCC"></path>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="form-items__item">
+                        <div class="input-wrapper">
+                            <input class="form-items__input" type="password" name="password">
+                            <label>Пароль</label>
+                        </div>
+                        <button class="form-items__left-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10.0001 13.0808C11.7006 13.0808 13.0791 11.7023 13.0791 10.0018C13.0791 8.30126 11.7006 6.92273 10.0001 6.92273C8.29955 6.92273 6.92102 8.30126 6.92102 10.0018C6.92102 11.7023 8.29955 13.0808 10.0001 13.0808Z" fill="#CCCCCC"/>
+                                <path d="M19.6932 9.14885C17.3265 6.28881 13.7438 3.53577 10.0001 3.53577C6.25556 3.53577 2.67206 6.29073 0.306861 9.14885C-0.102267 9.64304 -0.102267 10.3605 0.306861 10.8546C0.9015 11.5732 2.14812 12.9603 3.81311 14.1723C8.00634 17.2249 11.9845 17.2316 16.187 14.1723C17.852 12.9603 19.0986 11.5732 19.6932 10.8546C20.1012 10.3614 20.1033 9.64465 19.6932 9.14885ZM10.0001 5.69109C12.3771 5.69109 14.3107 7.62473 14.3107 10.0017C14.3107 12.3788 12.3771 14.3124 10.0001 14.3124C7.62304 14.3124 5.6894 12.3788 5.6894 10.0017C5.6894 7.62473 7.62304 5.69109 10.0001 5.69109Z" fill="#CCCCCC"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <button class="btn-top" type="submit">
+                    войти в кабинет клуба
+                </button>
+                <a class="restore" href="#">
+                    забыли пароль?
+                </a>
+            </form>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+</html>
