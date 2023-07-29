@@ -6,9 +6,13 @@
 	outline: none;
 }
 html {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-weight: 400;
 }
@@ -23,8 +27,9 @@ body {
 }
 
 .main {
+	position: relative;
 	width: 100%;
-	margin-left: 344px;
+	overflow-y: auto;
 }
 
 *,
