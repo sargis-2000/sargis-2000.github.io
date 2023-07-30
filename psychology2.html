@@ -12,7 +12,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
     <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -246,62 +245,38 @@
                 <header class="header psychology2-header">
                     <div class="container">
                         <div class="header-top">
-                            <button class="burger-btn">
-                                <img src="./images/header/menu-icon.png" alt="icon">
-                            </button>
+                            <div class="header-top__start">
+                                <a class="header-top__prev" href="#">
+                                    <img src="./images/psychology/prev-icon.png" alt="icon">
+                                </a>
+                            </div>
                             <div class="header-top__inner">
                                 <form class="header-top__form" action="#">
                                     <div class="header-top__wrapper">
-                                        <input class="header-top__input" type="search" name="search"
-                                            placeholder="Поиск">
+                                        <input class="header-top__input" type="search" name="search" placeholder="Поиск">
                                         <button class="header-top__btn" type="submit">
                                             <img src="./images/header/search-icon.svg" alt="icon">
                                         </button>
                                     </div>
+                                </form>
                             </div>
-                            <p class="header-top__text">Ваш профиль</p>
+                            <p class="header-top__text">Данные моего профиля</p>
                             <a class="header-top__link" href="#">
-                                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"
-                                        fill="#fff"></path>
+                                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path>
                                 </svg>
                                 Чат-бот клуба
                             </a>
-                            <a href="#" class="header-top__profile">
-                                <img src="./images/header/heade-profile-img.png" alt="img">
-                                <svg class="star1" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
-                                    viewBox="0 0 9 9" fill="none">
-                                    <path
-                                        d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z"
-                                        fill="#FF922D" stroke="#FFFEFE" />
-                                </svg>
-                                <svg class="star2" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
-                                    viewBox="0 0 9 9" fill="none">
-                                    <path
-                                        d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z"
-                                        fill="#FF922D" stroke="#FFFEFE" />
-                                </svg>
-                                <svg class="star3" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
-                                    viewBox="0 0 9 9" fill="none">
-                                    <path
-                                        d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z"
-                                        fill="#FF922D" stroke="#FFFEFE" />
-                                </svg>
-                                <svg class="star4" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
-                                    viewBox="0 0 9 9" fill="none">
-                                    <path
-                                        d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z"
-                                        fill="#FF922D" stroke="#FFFEFE" />
-                                </svg>
-                                <svg class="star5" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
-                                    viewBox="0 0 9 9" fill="none">
-                                    <path
-                                        d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z"
-                                        fill="#CFCFCF" stroke="#FFFEFE" />
-                                </svg>
-                            </a>
+                            <div class="header-top__end">
+                                <a class="header-top__link mobile-link" href="#">
+                                    <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="header-top__profile">
+                                    <img src="./images/header/heade-profile-img.png" alt="img">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -311,8 +286,8 @@
                             <h2 class="main-content__title">Психологический контейнер</h2>
                             <span class="main-content__text">Лекция прошла 22 марта 2023</span>
                         </div>
-                        <div class="main-content__middle">
-                            <div class="content-left">
+                        <div class="main-content__middle personal-middle">
+                            <div class="content-left main-middle">
                                 <form action="#">
                                     <ul class="personal-date">
                                         <li class="personal-date__item">
@@ -426,8 +401,8 @@
                                     </button>   
                                 </form>
                             </div>
-                            <div class="content-right">
-                                <ul class="right-items">
+                            <div class="content-right personal-content">
+                                <ul class="right-items personal-items">
                                     <li class="right-items__item item-active personal-item">
                                         <div class="item-active__middle personal-item__middle">
                                             <span class="item-active__percent">52%</span>
@@ -461,7 +436,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./js/personal.js"></script>
-    <script src="./js/menu.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

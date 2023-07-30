@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
     <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -176,12 +175,14 @@
         </aside>
         <main class="main">
             <div class="main-wrapper">
-                <header class="header">
+                <header class="header personal-data-header">
                     <div class="container">
                         <div class="header-top">
-                            <button class="burger-btn">
-                                <img src="./images/header/menu-icon.png" alt="icon">
-                            </button>
+                            <div class="header-top__start">
+                                <a class="header-top__prev" href="#">
+                                    <img src="./images/psychology/prev-icon.png" alt="icon">
+                                </a>
+                            </div>
                             <div class="header-top__inner">
                                 <form class="header-top__form" action="#">
                                     <div class="header-top__wrapper">
@@ -192,29 +193,23 @@
                                     </div>
                                 </form>
                             </div>
-                            <p class="header-top__text">Личные данные</p>
+                            <p class="header-top__text">Данные моего профиля</p>
                             <a class="header-top__link" href="#">
-                                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path></svg>
+                                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path>
+                                </svg>
                                 Чат-бот клуба
                             </a>
-                            <a href="#" class="header-top__profile">
-                                <img src="./images/header/heade-profile-img.png" alt="img">
-                                <svg class="star1" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star2" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star3" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star4" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star5" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#CFCFCF" stroke="#FFFEFE"/>
-                                </svg>
-                            </a>
+                            <div class="header-top__end">
+                                <a class="header-top__link mobile-link" href="#">
+                                    <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="header-top__profile">
+                                    <img src="./images/header/heade-profile-img.png" alt="img">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -223,7 +218,7 @@
                         <div class="main-content__top">
                             <h2 class="main-content__title">Личные данные</h2>
                         </div>
-                        <div class="main-content__middle">
+                        <div class="main-content__middle personal-middle">
                             <div class="content-left">
                                 <form action="#">
                                     <ul class="personal-date">
@@ -341,20 +336,20 @@
                                     </button>   
                                 </form>
                             </div>
-                            <div class="content-right">
-                                <div class="content-right__start">
+                            <div class="content-right personal-content">
+                                <div class="content-right__start personal-start">
                                     <div class="content-right__profile-img">
                                         <img class="content-right__img" src="./images/personal-date/profile-img.png" alt="img">
-                                        <a href="#" class="change">
+                                        <button class="change profile-change personal-change">
                                             <img class="change__icon" src="./images/personal-date/change-icon.png" alt="icon">
-                                        </a>
+                                        </button>
                                     </div>
                                     <div class="content-right__end">
                                         <h3 class="content-right__fullname">Вадим Семилетов</h3>
                                         <span class="content-right__skill">помощница старшей феи</span>
                                     </div>
                                 </div>
-                                <ul class="right-items">
+                                <ul class="right-items personal-items">
                                     <li class="right-items__item item-active personal-item">
                                         <div class="item-active__middle personal-item__middle">
                                             <span class="item-active__percent">52%</span>
@@ -381,12 +376,37 @@
                     </div>
                 </div>
             </div>
+            <div class="profile-popup">
+                <div class="profile-popup__item">
+                    <button class="profile-popup__close">
+                        <img src="./images/personally/popup-close-icon.png" alt="icon">
+                    </button>
+                    <div class="profile-popup__top">
+                        <img src="./images/main/checklist.svg" alt="icon">
+                        <h4 class="profile-popup__title">Фотография профиля</h4>
+                    </div>
+                    <p class="profile-popup__text">
+                        Выбранная область будет показываться в картинке профиля
+                    </p>
+                    <div class="image-edit">
+                        <img src="./images/main/edit-img.jpg" alt="img">
+                    </div>
+                    <div class="profile-popup__btns">
+                        <button class="profile-popup__save">
+                            сохранить
+                        </button>
+                        <button class="profile-popup__cancel">
+                            отмена
+                        </button>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/personal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/profile-popup.js"></script>
 </body>
 </html>

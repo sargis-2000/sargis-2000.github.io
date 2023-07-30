@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;500;600;700;800;900&family=Lato:wght@700&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
     <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -175,12 +174,14 @@
         </aside>
         <main class="main">
             <div class="main-wrapper">
-                <header class="header">
+                <header class="header profile-header">
                     <div class="container">
                         <div class="header-top">
-                            <button class="burger-btn">
-                                <img src="./images/header/menu-icon.png" alt="icon">
-                            </button>
+                            <div class="header-top__start">
+                                <a class="header-top__prev" href="#">
+                                    <img src="./images/psychology/prev-icon.png" alt="icon">
+                                </a>
+                            </div>
                             <div class="header-top__inner">
                                 <form class="header-top__form" action="#">
                                     <div class="header-top__wrapper">
@@ -193,27 +194,21 @@
                             </div>
                             <p class="header-top__text">Ваш профиль</p>
                             <a class="header-top__link" href="#">
-                                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path></svg>
+                                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path>
+                                </svg>
                                 Чат-бот клуба
                             </a>
-                            <a href="#" class="header-top__profile">
-                                <img src="./images/header/heade-profile-img.png" alt="img">
-                                <svg class="star1" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star2" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star3" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star4" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#FF922D" stroke="#FFFEFE"/>
-                                </svg>
-                                <svg class="star5" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                    <path d="M5.45106 1.30902C5.1517 0.387706 3.84829 0.387708 3.54894 1.30902L3.12642 2.60942H1.75909C0.790363 2.60942 0.387591 3.84904 1.1713 4.41844L2.27749 5.22214L1.85497 6.52254C1.55561 7.44385 2.6101 8.20998 3.39381 7.64058L4.5 6.83688L5.60619 7.64058C6.38991 8.20998 7.44439 7.44385 7.14503 6.52254L6.72251 5.22214L7.8287 4.41844C8.61241 3.84904 8.20963 2.60942 7.24091 2.60942L5.87358 2.60942L5.45106 1.30902Z" fill="#CFCFCF" stroke="#FFFEFE"/>
-                                </svg>
-                            </a>
+                            <div class="header-top__end">
+                                <a class="header-top__link mobile-link" href="#">
+                                    <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" fill="#fff"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="header-top__profile">
+                                    <img src="./images/header/heade-profile-img.png" alt="img">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -222,6 +217,16 @@
                         <div class="main-content__top">
                             <h2 class="main-content__title">Ваш профиль</h2>
                             <span class="main-content__text">Лекция прошла 22 марта 2023</span>
+                        </div>
+                        <div class="profile-change">
+                            <div class="profile-change__img">
+                                <img src="./images/main/profile-img-big.png" alt="icon">
+                                <button class="change profile-change">
+                                    <img class="change__icon" src="./images/personal-date/change-icon.png" alt="icon">
+                                </button>
+                            </div>
+                            <strong class="profile-change__name">Вадим Семилетов</strong>
+                            <span class="profile-change__mail">9225647@mail.ru</span>
                         </div>
                         <div class="main-content__middle">
                             <div class="content-left">
@@ -287,8 +292,31 @@
                                         </svg>
                                     </a>
                                 </div>
+                                <div class="content-left__box point-box profile-change-box">
+                                    <h2 class="content-left__title bottom-title">Баланс вашего кошелька</h2>
+                                    <img class="content-left__icon" src="./images/main/pay.svg" alt="pay">
+                                    <div class="content-left__result">
+                                        <span class="content-left__coins">12 400</span>
+                                        <span class="content-left__text">гесскоинов</span>
+                                    </div>
+                                    <a class="content-left__link" href="#">
+                                        перейти к истории заданий
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                            <g clip-path="url(#clip0_3518_905)">
+                                            <path d="M11.7047 5.28785L6.71312 0.296246C6.31942 -0.0974467 5.68092 -0.0974467 5.28722 0.296246C4.89353 0.689939 4.89353 1.32845 5.28722 1.72214L9.5654 6.00029L5.28722 10.2784C4.89353 10.6721 4.89353 11.3106 5.28722 11.7043C5.68092 12.098 6.31942 12.098 6.71312 11.7043L11.7047 6.71274C12.0984 6.32003 12.0984 5.68154 11.7047 5.28785ZM5.7029 4.98558L1.74001 0.808857C1.3418 0.389694 0.696824 0.389694 0.298621 0.808857C-0.0995812 1.22802 -0.0995812 1.908 0.298621 2.32767L3.54108 5.74499L0.298621 9.16231C-0.0995812 9.58149 -0.0995812 10.2619 0.298621 10.6811C0.696824 11.1003 1.3418 11.1003 1.74001 10.6811L5.7029 6.5044C6.1011 6.08523 6.1011 5.40526 5.7029 4.98558Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3518_905">
+                                            <rect width="12" height="12" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                             <div class="content-right">
+                                <a class="content-right__link" href="#">редактировать личные данные</a>
+                                <a class="content-right__link password-change" href="#">изменить пароль</a>
                                 <ul class="right-items">
                                     <li class="right-items__item item-active top-item-active">
                                         <p class="right-items__desc item-active__desc">
@@ -304,7 +332,7 @@
                                             Похоже, еще не все каналы клуба освоены 
                                             вами. Давайте это исправим!
                                         </p>
-                                        <div class="right-items__middle">
+                                        <div class="right-items__middle profile-middle">
                                             <span class="right-items__percent">16%</span>
                                             <a class="right-items__link item-active__link check-link" href="#">проверить</a>
                                         </div>
@@ -317,7 +345,7 @@
                                             Ваш профиль всего в паре шагов от 
                                             совершенства. Осталось еще чуть-чуть...
                                         </p>
-                                        <div class="item-active__middle">
+                                        <div class="item-active__middle profile-middle">
                                             <span class="item-active__percent">52%</span>
                                             <a class="item-active__link" href="#">завершить мой образ</a>
                                         </div>
@@ -333,7 +361,6 @@
             </div>
         </main>
     </div>
-    <script src="./js/menu.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
