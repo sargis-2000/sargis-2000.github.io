@@ -173,7 +173,7 @@
             </div>
         </aside>
         <main class="main">
-            <div class="main-wrapper">
+            <div class="main-wrapper" data-simplebar>
                 <header class="header profile-header">
                     <div class="container">
                         <div class="header-top">
@@ -361,6 +361,33 @@
             </div>
         </main>
     </div>
+    <div class="profile-popup">
+        <div class="profile-popup__item">
+            <button class="profile-popup__close">
+                <img src="./images/personally/popup-close-icon.png" alt="icon">
+            </button>
+            <div class="profile-popup__top">
+                <img src="./images/main/checklist.svg" alt="icon">
+                <h4 class="profile-popup__title">Фотография профиля</h4>
+            </div>
+            <p class="profile-popup__text">
+                Выбранная область будет показываться в картинке профиля
+            </p>
+            <div class="image-edit">
+                <img src="./images/main/edit-img.jpg" alt="img">
+            </div>
+            <div class="profile-popup__btns">
+                <button class="profile-popup__save">
+                    сохранить
+                </button>
+                <button class="profile-popup__cancel">
+                    отмена
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/simplebar.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/profile-popup.js"></script>
 </body>
 </html>
