@@ -136,7 +136,6 @@ legend {
     right: 0;
     width: auto !important;
     height: auto !important;
-    z-index: 0;
   }
   
   .simplebar-offset {
@@ -739,8 +738,9 @@ legend {
     max-height: 1163px;
     transition: 0.3s ease-out;
     overflow-y: auto;
-    z-index: 0;
+    z-index: 1;
 }
+
 
 @media (max-width: 1037px) {
     .sidebar {
@@ -3364,6 +3364,7 @@ legend {
 
 .restore-popup {
     background-color: #FAF7F5;
+    border-radius: 18px;
     padding: 20px;
     height: 100%;
     max-height: 856px;
