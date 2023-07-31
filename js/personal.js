@@ -14,6 +14,7 @@ personalItems.forEach(item => {
         if(elem) elem.removeAttribute('style');
         const parent = this.closest('.personal-date__item');
         parent.style.border = '1px solid #FF922D'
+        parent.style.backgroundColor = '#fff';
        }
        
        input.onblur = () => {
