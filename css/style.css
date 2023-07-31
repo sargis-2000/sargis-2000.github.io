@@ -27,22 +27,13 @@ body {
 .main {
 	position: relative;
 	width: 100%;
-	overflow-y: auto;
 }
 
 .main::-webkit-scrollbar {
-    width: 10px;
+    display: none;
+    opacity: 0;
 }
 
-.main::-webkit-scrollbar-track {
-    background: #fff;
-    border-radius: 5px;
-}
-
-.main::-webkit-scrollbar-thumb {
-    background: #FF922D;
-    border-radius: 5px;
-}
 
 *,
 *::before,
@@ -116,10 +107,247 @@ legend {
 }
 
 
+[data-simplebar] {
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .simplebar-wrapper {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+  }
+  
+  .simplebar-mask {
+    direction: inherit;
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto !important;
+    height: auto !important;
+    z-index: 0;
+  }
+  
+  .simplebar-offset {
+    direction: inherit !important;
+    box-sizing: inherit !important;
+    resize: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .simplebar-content-wrapper {
+    direction: inherit;
+    box-sizing: border-box !important;
+    position: relative;
+    display: block;
+    height: 100%; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+    width: auto;
+    max-width: 100%; /* Not required for horizontal scroll to trigger */
+    max-height: 100%; /* Needed for vertical scroll to trigger */
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .simplebar-content-wrapper::-webkit-scrollbar,
+  .simplebar-hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  
+  .simplebar-content:before,
+  .simplebar-content:after {
+    content: ' ';
+    display: table;
+  }
+  
+  .simplebar-placeholder {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    pointer-events: none;
+  }
+  
+  .simplebar-height-auto-observer-wrapper {
+    box-sizing: inherit !important;
+    height: 100%;
+    width: 100%;
+    max-width: 1px;
+    position: relative;
+    float: left;
+    max-height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    flex-grow: inherit;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+  
+  .simplebar-height-auto-observer {
+    box-sizing: inherit;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1000%;
+    width: 1000%;
+    min-height: 1px;
+    min-width: 1px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .simplebar-track {
+    z-index: 1;
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    pointer-events: none;
+    border-radius: 7px;
+  }
+  
+  [data-simplebar].simplebar-dragging {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  [data-simplebar].simplebar-dragging .simplebar-content {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  [data-simplebar].simplebar-dragging .simplebar-track {
+    pointer-events: all;
+  }
+  
+  .simplebar-scrollbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-height: 10px;
+  }
+  
+  .simplebar-scrollbar:before {
+    width: 10px;
+    position: absolute;
+    content: '';
+    background: var(--unnamed, linear-gradient(180deg, #FF8B20 0%, #FF7D04 100%));
+    border-radius: 7px;
+    left: 0;
+    transition: opacity 0.2s 0.5s linear;
+  }
+  
+  .simplebar-scrollbar.simplebar-visible:before {
+    opacity: 0.5;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+  
+  .simplebar-track.simplebar-vertical {
+    top: 23px;
+    bottom: 23px;
+    width: 10px;
+    background-color: #C8C8C8;
+  }
+  
+  .simplebar-scrollbar:before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
-@media (max-width: 1037px) {
+  .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+  }
+  
+  .simplebar-track.simplebar-horizontal {
+    left: 0;
+    height: 11px;
+  }
+  
+  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    right: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    min-height: 0;
+    min-width: 10px;
+    width: auto;
+  }
+  
+  /* Rtl support */
+  [data-simplebar-direction='rtl'] .simplebar-track.simplebar-vertical {
+    right: auto;
+    left: 0;
+  }
+  
+  .simplebar-dummy-scrollbar-size {
+    direction: rtl;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    height: 500px;
+    width: 500px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: scrollbar !important;
+  }
+  
+  .simplebar-dummy-scrollbar-size > div {
+    width: 200%;
+    height: 200%;
+    margin: 10px 0;
+  }
+  
+  .simplebar-hide-scrollbar {
+    position: fixed;
+    left: 0;
+    visibility: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+
+
+@media (max-width: 1114px) {
     .main {
-        margin-left: 0;
+        overflow: unset;
     }
 }
 .header {
@@ -508,9 +736,10 @@ legend {
     padding: 58px 0 37px 0;
     border-radius: 30px 0 0 30px;
     height: 100%;
+    max-height: 1163px;
     transition: 0.3s ease-out;
     overflow-y: auto;
-    z-index: 2;
+    z-index: 0;
 }
 
 @media (max-width: 1037px) {
@@ -1097,13 +1326,18 @@ legend {
     background-color: #FAF7F5;
     padding: 30px 0;
     border-radius: 0 30px 30px 0;
+    overflow-y: auto;
+    max-height: 1163px;
+    height: 100%;
 }
 
-@media (max-width: 1037px) {
+@media (max-width: 1114px) {
     .main-wrapper {
         padding: 20px 0;
         position: unset;
         width: 100%;
+        max-height: unset;
+        overflow: unset;
     }
 }
 
@@ -1270,20 +1504,6 @@ legend {
     }
 }
 
-
-@media (max-width: 1037px) {
-    .sidebar {
-        left: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        overflow-y: auto;
-        background: linear-gradient(180deg, #FF8B20 0%, #FF7D04 100%);
-        box-shadow: unset;
-        border-radius: unset;
-        transform: translateX(-100%);
-    }
-}
 
 .sidebar__close-btn {
     width: 100%;
@@ -1970,7 +2190,7 @@ legend {
     flex-direction: column;
 }
 
-@media (max-width: 1037px) {
+@media (max-width: 1114px) {
    .content-left {
     flex-direction: unset;
     gap: 20px;
@@ -2002,7 +2222,7 @@ legend {
     display: none;
 }
 
-@media (max-width: 788px) {
+@media (max-width: 1114px) {
     .content-left__box {
         min-height: 165px;
         height: 100%;
@@ -2017,7 +2237,7 @@ legend {
     margin-top: 23px;
 }
 
-@media (max-width: 1037px) {
+@media (max-width: 1114px) {
     .point-box {
         margin-top: 0;
     }
@@ -2041,6 +2261,7 @@ legend {
 }
 
 .content-left__link {
+    max-width: 252px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -2062,7 +2283,7 @@ legend {
     }
 }
 
-@media (max-width: 1037px) {
+@media (max-width: 1114px) {
     .content-left__link {
         display: none;
     }
@@ -2104,7 +2325,7 @@ legend {
     margin-bottom: 40px;
 }
 
-@media (max-width: 1037px) {
+@media (max-width: 1114px) {
     .content-left__result {
         margin-bottom: 0;
     }
@@ -2183,7 +2404,7 @@ legend {
     transition: 0.3s ease-out;
 }
 
-@media (max-width: 788px) {
+@media (max-width: 1114px) {
     .point-box {
         padding: 37px 37px 21px 37px;
         width: 100%;
@@ -2502,11 +2723,10 @@ legend {
 
 .profile-popup__item {
     position: relative;
+    max-width: 350px;
     width: 100%;
     padding: 35px 23px;
     background-color: #fff;
-    height: 100%;
-    overflow-y: auto;
     border-radius: 30px;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
 }
@@ -2773,6 +2993,7 @@ legend {
     font-size: 15px;
     font-weight: 400;
     color: #464646;
+    padding: 10px;
     transition: 0.3s ease-out;
 }
 
@@ -3010,6 +3231,7 @@ legend {
     width: 100%;
     max-width: 600px;
     background-color: #FAF7F5;
+    border-radius: 18px;
     padding: 22px;
     overflow-y: auto;
     height: 100%;
@@ -3592,7 +3814,7 @@ legend {
     margin-bottom: 34px;
 }
 
-@media (max-width: 788px) {
+@media (max-width: 1114px) {
     .progress-bar {
         width: 118px;
         height: 118px;
@@ -3697,7 +3919,7 @@ legend {
     margin-right: auto;
 }
 
-@media (max-width: 1037px) {
+@media (max-width: 1114px) {
     .content-left__title {
         display: none;
     }
@@ -3993,16 +4215,6 @@ legend {
     }
 }
 
-.profile-popup__item {
-    position: relative;
-    width: 100%;
-    padding: 35px 23px;
-    background-color: #fff;
-    height: 100%;
-    overflow-y: auto;
-    border-radius: 30px;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
-}
 
 .profile-popup__top {
     display: flex;
@@ -4576,6 +4788,7 @@ legend {
 }
 
 .objectives-month__link {
+    max-width: 189px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -4587,6 +4800,7 @@ legend {
     font-size: 11.703px;
     color: #fff;
     transition: 0.3s ease-out;
+    margin-left: auto;
 }
 
 @media (max-width: 390px) {
@@ -5347,8 +5561,9 @@ legend {
 }
 
 .payment__link {
+    max-width: 289px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 31px;
     padding: 12px 23px;
@@ -5357,6 +5572,8 @@ legend {
     color: #fff;
     font-size: 11.703px;
     font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
     transition: 0.3s ease-out;
 }
 
@@ -6184,17 +6401,6 @@ legend {
     }
 }
 
-
-.profile-popup__item {
-    position: relative;
-    width: 100%;
-    padding: 35px 23px;
-    background-color: #fff;
-    height: 100%;
-    overflow-y: auto;
-    border-radius: 30px;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
-}
 
 .profile-popup__top {
     display: flex;
@@ -7104,7 +7310,7 @@ legend {
     padding: 28px 22px !important;
 }
 
-@media (max-width: 788px) {
+@media (max-width: 1114px) {
     .profile-items {
         display: none !important;
     }
@@ -7908,17 +8114,6 @@ legend {
 }
 
 
-.profile-popup__item {
-    position: relative;
-    width: 100%;
-    padding: 35px 23px;
-    background-color: #fff;
-    height: 100%;
-    overflow-y: auto;
-    border-radius: 30px;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
-}
-
 .profile-popup__top {
     display: flex;
     align-items: center;
@@ -8089,6 +8284,7 @@ legend {
 }
 
 .profile-change-link {
+    max-width: 289px;
     padding: 5px 26px;
 }
 
@@ -8526,7 +8722,7 @@ legend {
 }
 
 
-@media (max-width: 788px) {
+@media (max-width: 1114px) {
     .content-inner {
         position: absolute;
         left: 50%;
@@ -8601,7 +8797,7 @@ legend {
     color: #6D7878;
 }
 
-@media (max-width: 788px) {
+@media (max-width: 1114px) {
     .content-left__coins {
         font-size: 32.335px;
         margin-bottom: 6px;
@@ -8858,16 +9054,6 @@ legend {
     }
 }
 
-
-.profile-popup__item {
-    position: relative;
-    width: 100%;
-    padding: 35px 23px;
-    background-color: #fff;
-    overflow-y: auto;
-    border-radius: 30px;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
-}
 
 .profile-popup__top {
     display: flex;
@@ -9177,6 +9363,7 @@ legend {
     margin-bottom: 31px;
 }
 
+
 @media (max-width: 1114px) {
     .description {
         min-height: unset;
@@ -9185,6 +9372,11 @@ legend {
     .psychology-description {
         margin-bottom: 0;
     }
+}
+
+.archive-description {
+    min-height: unset;
+    padding: unset;
 }
 
 .description__title {
@@ -9303,7 +9495,7 @@ legend {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.15);
-    z-index: 1;
+    z-index: 2;
     padding: 20px;
     min-height: 100vh;
     opacity: 0;
@@ -9325,6 +9517,7 @@ legend {
 .psychology-popup__item {
     position: relative;
     border-radius: 30px;
+    max-width: 350px;
     width: 100%;
     background-color: #fff;
     padding: 35px 17px 52px 30px;
@@ -9913,6 +10106,7 @@ legend {
 }
 
 .yoga-cards img {
+    display: block;
     width: 100%;
     border-radius: 15px;
     margin-bottom: 3px;
