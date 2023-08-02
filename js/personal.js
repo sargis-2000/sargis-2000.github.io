@@ -6,40 +6,40 @@ personalItems.forEach(item => {
     const label = dateInput.nextElementSibling;
     if(input) {
         input.onfocus = function() {
-        if(label.textContent === '') {
-            label.textContent = input.value;
-            input.value = '';
-        }
-        const elem = document.querySelector('.personal-date__item[style]');
-        if(elem) elem.removeAttribute('style');
-        const parent = this.closest('.personal-date__item');
-        parent.style.border = '1px solid #FF922D'
-        parent.style.backgroundColor = '#fff';
-       }
-       
-       input.onblur = () => {
-        const date = document.querySelectorAll('.ui-state-default');
-        date.forEach(item => {
-            item.onclick = () => {
-                if(input.value === '') {
-                    input.nextElementSibling.textContent = input.value;
-                    input.value = '';
+            const parent = this.closest('.personal-date__item');
+            const path = parent.querySelectorAll('path');
+            path.forEach(item => {
+                if(input.value !== '') {
+                    item.classList.add('active');
                 }
-            }
-        })
-        if(input.value !== '') {
-            input.nextElementSibling.textContent = input.value;
-            input.value = '';
+            });
         }
-        item.removeAttribute('style');
+        
+        input.onblur = function () {
+            if(this.value !== '') {
+            this.closest('.input-wrapper').querySelector('label').textContent = this.value;
+            this.value = '';
+            item.removeAttribute('style');
+            } else {
+                item.removeAttribute('style');
+            }
        }
     }
 });
 
-const dateBtn = document.querySelector('#date-btn');
-dateBtn.onclick = () => {
-    dateBtn.parentNode.querySelector('input').focus();
-}
-$(function() {
-    $( "#date" ).datepicker();
+
+const input = $('#date').pickadate({
+    weekdaysShort: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    monthsFull: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    today: 'Сегодня',
+    clear: 'Очистить',
+    close: 'Закрыть',
+    closeOnSelect: false,
+    closeOnClear: false,
+});
+const picker = input.pickadate('picker');
+
+$('#date-btn').on('click', function(event) {
+    event.stopPropagation();
+    picker.open();
 });
