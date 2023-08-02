@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;500;600;700;800;900&family=Lato:wght@700&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fonts/Lucida Grande/regular/style.css">
     <link rel="stylesheet" href="./fonts/Lucida Grande/bold/style.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://common.olemiss.edu/_js/pickadate.js-3.5.3/lib/themes/classic.css" id="theme_base">
+	<link rel="stylesheet" href="https://common.olemiss.edu/_js/pickadate.js-3.5.3/lib/themes/classic.date.css" id="theme_date">
 </head>
 <body>
     <div class="wrapper">
@@ -219,7 +220,7 @@
                             <h2 class="main-content__title">Личные данные</h2>
                         </div>
                         <div class="main-content__middle personal-middle">
-                            <div class="content-left">
+                            <div class="content-left personal-content">
                                 <form action="#">
                                     <ul class="personal-date">
                                         <li class="personal-date__item">
@@ -230,7 +231,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="personal-date__item active">
+                                        <li class="personal-date__item disabled">
                                             <div class="personal-date__left">
                                                 <div class="input-wrapper">
                                                     <input class="personal-date__input active" type="email" name="mail">
@@ -247,7 +248,7 @@
                                         <li class="personal-date__item">
                                             <div class="personal-date__left">
                                                 <div class="input-wrapper">
-                                                    <input class="personal-date__input" type="text" name="date" id="date">
+                                                    <input class="personal-date__input" type="date" name="date" id="date">
                                                     <label>Дата рождение</label>
                                                 </div>
                                             </div>
@@ -269,10 +270,6 @@
                                             <div class="personal-date__left">
                                                 <div class="tel-county">
                                                     <div class="tel-item">
-                                                        <button type="button" class="tel-item__btn">
-                                                            <img src="./images/personal-date/country-icon.png" alt="icon">
-                                                            <img src="./images/personal-date/arrow-down.png" alt="icon">
-                                                        </button>
                                                         <div class="input-wrapper">
                                                             <input class="personal-date__input" type="tel" name="tel">
                                                             <label>Номер телефона</label>
@@ -296,10 +293,12 @@
                                         </li>
                                         <li class="personal-date__item">
                                             <div class="personal-date__left">
-                                                <button type="button" class="country">
-                                                    Страна проживания
-                                                    <img src="./images/personal-date/arrow-down.png" alt="icon">
-                                                </button>
+                                                <div class="input-wrapper">
+                                                    <select name="country">
+                                                        <option value="Россия">Российская федерация</option>
+                                                        <option value="Россия">Российская федерация</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                             <button class="personal-date__left-btn" type="button">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -404,7 +403,7 @@
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./js/pickadate.js"></script>
     <script src="./js/simplebar.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/personal.js"></script>
