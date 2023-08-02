@@ -15,6 +15,7 @@ body {
 	min-height: 100vh;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-weight: 400;
+    background-color: #FF922D;
 }
 
 .container {
@@ -261,7 +262,7 @@ legend {
   }
   
   .simplebar-scrollbar:before {
-    width: 10px;
+    width: 3px;
     position: absolute;
     content: '';
     background: var(--unnamed, linear-gradient(180deg, #FF8B20 0%, #FF7D04 100%));
@@ -279,7 +280,7 @@ legend {
   .simplebar-track.simplebar-vertical {
     top: 23px;
     bottom: 23px;
-    width: 10px;
+    width: 3px;
     background-color: #C8C8C8;
   }
   
@@ -340,13 +341,19 @@ legend {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-  }
-  
+  } 
 
+
+.main-content {
+    margin-right: 10px;
+}
 
 @media (max-width: 1114px) {
     .main {
         overflow: unset;
+    }
+    .main-content {
+        margin-right: 0;
     }
 }
 .header {
@@ -401,74 +408,6 @@ legend {
 
 .mobile-item {
     display: none;
-}
-
-.ui-datepicker {
-    padding: 10px;
-}
-
-.ui-widget-content {
-    background-color: #F77F11;
-    border: none !important;
-    border-radius: 5px;
-}
-
-.ui-widget-content {
-    color: #fff;
-}
-
-.ui-datepicker td span, 
-.ui-datepicker td a {
-    color: #F77F11 !important;
-    background-color: #FAF7F5 !important;
-    border: none !important;
-    border-radius: 5px;
-    transition: .3s ease-out;
-    text-align: center;
-}
-
-.ui-state-highlight, 
-.ui-widget-content 
-.ui-state-highlight, 
-.ui-widget-header 
-.ui-state-highlight {
-    background-color: #C8C8C8 !important;
-    color: #8D4401 !important;
-}
-
-.ui-datepicker-prev,
-.ui-datepicker-next {
-    transition: .3s ease-out;
-}
-
-.ui-datepicker-prev-hover,
-.ui-datepicker-next-hover {
-    background-color: #C8C8C8 !important;
-    border: none !important;
-    transition: .3s ease-out;
-}
-
-.ui-datepicker td {
-    padding: 3px;
-}
-
-.ui-datepicker td span, 
-.ui-datepicker td a:hover {
-    background-color: #C8C8C8 !important;
-    color: #8D4401 !important;
-    transition: .3s ease-out;
-} 
-
-.ui-widget-header {
-    background-color: #C8C8C8;
-    border-radius: 5px;
-    border: unset;
-    background-color: #fff;
-}
-
-.ui-datepicker-month,
-.ui-datepicker-year {
-    color: #F77F11;
 }
 
 
@@ -742,7 +681,7 @@ legend {
 }
 
 
-@media (max-width: 1037px) {
+@media (max-width: 1114px) {
     .sidebar {
         position: fixed;
         left: 0;
@@ -1210,13 +1149,6 @@ legend {
     color: #fff;
 }
 
-.description__title {
-    font-size: 20px;
-    color: #464646;
-    line-height: 100%;
-    margin-bottom: 16px;
-    font-weight: 500;
-}
 
 .description__text {
     font-size: 13px;
@@ -1317,6 +1249,8 @@ legend {
     max-width: 1280px;
     margin: 0 auto;
     min-height: 1163px;
+    background-color: #fff;
+    border-radius: 30px;
 }
 
 .main-wrapper {
@@ -1324,7 +1258,7 @@ legend {
     right: 0;
     width: calc(100% - 344px);
     background-color: #FAF7F5;
-    padding: 30px 0;
+    padding: 20px 0;
     border-radius: 0 30px 30px 0;
     overflow-y: auto;
     max-height: 1163px;
@@ -2185,7 +2119,6 @@ legend {
 
 .content-left {
     width: 100%;
-    max-width: 350px;
     display: flex;
     flex-direction: column;
 }
@@ -2374,7 +2307,6 @@ legend {
 
 .content-right {
     width: 100%;
-    max-width: 350px;
 }
 
 @media (max-width: 788px) {
@@ -3994,17 +3926,6 @@ legend {
 
 .bottom-title {
     margin-bottom: 49px;
-}
-
-.content-right {
-    width: 100%;
-    max-width: 350px;
-}
-
-@media (max-width: 788px) {
-    .content-right {
-        max-width: unset;
-    }
 }
 
 .content-right__link {
@@ -6182,16 +6103,6 @@ legend {
     margin-bottom: 49px;
 }
 
-.content-right {
-    width: 100%;
-    max-width: 350px;
-}
-
-@media (max-width: 788px) {
-    .content-right {
-        max-width: unset;
-    }
-}
 
 .content-right__link {
     display: flex;
@@ -6569,7 +6480,7 @@ legend {
     min-height: 57px;
 }
 
-.personal-date__item.active {
+.personal-date__item.disabled {
     background-color: #e8e8e8;
 }
 
@@ -6580,6 +6491,34 @@ legend {
     font-weight: 400;
     color: #454545;
     transition: 0.2s;
+}
+
+input[type=date] {
+    cursor: pointer;
+}
+
+input[type=date]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-month-field{
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type="date"]::-webkit-input-placeholder{ 
+    visibility: hidden !important;
+}
+
+input::-webkit-calendar-picker-indicator{
+    display: none;
 }
 
 .personal-date__input.active ~ label {
@@ -6621,6 +6560,10 @@ legend {
     transition: 0.3s ease-out;
 }
 
+path.active {
+    fill: #FF922D;
+}
+
 .tel-county {
     display: flex;
     column-gap: 16px;
@@ -6631,12 +6574,11 @@ legend {
     display: flex;
     column-gap: 16px;
 }
-
-.tel-item__btn {
-    display: flex;
-    align-items: center;
-    column-gap: 7px;
+select {
+    appearance: none;
+    font-family: inherit;
     color: #454545;
+    cursor: pointer;
 }
 
 .country {
@@ -7889,16 +7831,6 @@ legend {
     margin-bottom: 49px;
 }
 
-.content-right {
-    width: 100%;
-    max-width: 350px;
-}
-
-@media (max-width: 788px) {
-    .content-right {
-        max-width: unset;
-    }
-}
 
 .content-right__link {
     display: flex;
@@ -8830,16 +8762,6 @@ legend {
     margin-bottom: 49px;
 }
 
-.content-right {
-    width: 100%;
-    max-width: 350px;
-}
-
-@media (max-width: 788px) {
-    .content-right {
-        max-width: unset;
-    }
-}
 
 .content-right__link {
     display: flex;
@@ -9181,6 +9103,9 @@ legend {
         max-width: unset;
         margin-bottom: 26px;
     }
+    .personal-content {
+        margin-bottom: 0;
+    }
     .psychology-content {
         flex-direction: column;
         row-gap: unset;
@@ -9189,7 +9114,16 @@ legend {
 
 @media (max-width: 1114px) {
     .materials__item {
-        max-width: 165px;
+        flex: 1;
+    }
+    .bottom-links__item {
+        flex: 1;
+    }
+    .materials__btn {
+        max-width: unset !important;
+    }
+    .bottom-links__link {
+        max-width: unset !important;
     }
 }
 
@@ -9219,6 +9153,7 @@ legend {
     max-width: 106px;
     width: 100%;
     max-height: 106px;
+    border-radius: 100px;
 }
 
 @media (max-width: 371px) {
@@ -9278,7 +9213,6 @@ legend {
 
 .materials__btn {
     width: 100%;
-    max-width: 165px;
     min-height: 165px;
     display: flex;
     flex-direction: column;
@@ -9332,6 +9266,10 @@ legend {
     transition: 0.3s ease-out;
 }
 
+.bottom-links__link.active {
+    background-color: #FF922D;
+}
+
 .bottom-links__link:hover {
     background-color: #FF922D;
 }
@@ -9380,7 +9318,11 @@ legend {
     padding: unset;
 }
 
-.description__title {
+.psychology-description {
+    margin-bottom: 0;
+}
+
+.psychology-description h2 {
     font-size: 20px;
     color: #464646;
     font-weight: 500;
@@ -9388,7 +9330,7 @@ legend {
     margin-bottom: 20px;
 }
 
-.description__text {
+.psychology-description p {
     font-size: 13px;
     font-weight: 400;
     color: #464646;
@@ -9466,14 +9408,14 @@ legend {
     column-gap: 6px;
 }
 
-.video-desc__title {
+.videos-desc h4 {
     margin-bottom: 13px;
     font-size: 14px;
     font-weight: 700;
     color: #464646;
 }
 
-.video-desc__item {
+ol li {
     font-size: 14px;
     font-style: italic;
     font-weight: 400;
