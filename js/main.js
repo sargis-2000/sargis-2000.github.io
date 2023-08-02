@@ -1,11 +1,12 @@
 const main = document.querySelector('.wrapper');
+const sidebar = document.querySelector('aside');
 const deviceHeight = window.innerHeight;
 const mainHeight = main.offsetHeight;
-const mainItem = main.querySelector('.main-wrapper');
 
 function centerContent() {
-    if(mainHeight > deviceHeight ) {
-        main.style.minHeight = `${deviceHeight}px`;
+    if(mainHeight > deviceHeight) {
+        main.style.height = `${deviceHeight - 40}px`;
+        sidebar.style.height = `${deviceHeight - 40}px`;
     } else {
         main.removeAttribute('style');
     }
