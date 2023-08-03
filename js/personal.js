@@ -9,19 +9,26 @@ personalItems.forEach(item => {
             const parent = this.closest('.personal-date__item');
             const path = parent.querySelectorAll('path');
             path.forEach(item => {
-                if(input.value !== '') {
-                    item.classList.add('active');
-                }
+                item.classList.add('active');
             });
+            parent.classList.add('active');
         }
         
         input.onblur = function () {
+            const parent = this.closest('.personal-date__item');
+            const path = parent.querySelectorAll('path');
+            parent.classList.remove('active');
+            parent.querySelector('label').classList.remove('active');
+            parent.querySelector('label').classList.remove('yellow');
+            path.forEach(item => {
+                item.classList.remove('active');
+            });
             if(this.value !== '') {
-            this.closest('.input-wrapper').querySelector('label').textContent = this.value;
-            this.value = '';
-            item.removeAttribute('style');
+                input.classList.add('active');
+                parent.querySelector('label').classList.add('active');
             } else {
                 item.removeAttribute('style');
+                input.classList.remove('active');
             }
        }
     }
@@ -43,3 +50,32 @@ $('#date-btn').on('click', function(event) {
     event.stopPropagation();
     picker.open();
 });
+
+
+const select = document.querySelector('select');
+const parent = select.parentNode.closest('.personal-date__item');
+const paths = parent.querySelectorAll('path');
+const options = select.querySelectorAll('option');
+
+select.onfocus = () => {
+    paths.forEach(path => {
+        path.classList.add('active');
+    });
+    parent.classList.add('active');
+}
+
+
+select.onblur = () => {
+    paths.forEach(path => {
+        path.classList.remove('active');
+    });
+    parent.classList.remove('active');
+}
+
+select.onchange = () => {
+    paths.forEach(path => {
+        path.classList.remove('active');
+    });
+    parent.classList.remove('active');
+    select.blur();
+}
