@@ -6567,6 +6567,7 @@ input::-webkit-calendar-picker-indicator{
 .personal-date__input:focus~label {
     font-size: 10px;
     transition: 0.2s;
+    color: #FF922D;
 }
 
 .personal-date__desc {
@@ -6685,6 +6686,11 @@ select {
     padding: 25px 22px;
 }
 
+@media (max-width: 1114px) {
+    .personal-item {
+        margin-bottom: 31px;
+    }
+}
 
 .personal-item__middle {
     column-gap: 15px;
