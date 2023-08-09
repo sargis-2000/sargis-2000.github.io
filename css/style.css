@@ -2431,6 +2431,13 @@ legend {
     border-radius: 30px;
 }
 
+.right-items__desc {
+    color: #6D6D6D;
+    font-family: Fira Sans Condensed;
+    font-size: 16.364px;
+    font-weight: 700;
+    line-height:  97.778%;
+}
 
 .right-items__middle {
     width: 100%;
