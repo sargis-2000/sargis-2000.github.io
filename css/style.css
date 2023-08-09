@@ -285,7 +285,7 @@ legend {
   .simplebar-track.simplebar-vertical {
     top: 23px;
     bottom: 23px;
-    width: 3px;
+    width: 0;
     background-color: #C8C8C8;
   }
   
@@ -294,6 +294,15 @@ legend {
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  .simplebar-scrollbar {
+    opacity: 0;
+    transition: .1s ease-out;
+  }
+
+  .simplebar-scrollbar.simplebar-visible {
+    opacity: 1;
   }
 
   .simplebar-scrollbar.simplebar-visible::before {
@@ -387,6 +396,16 @@ legend {
 
 .payment-header {
     margin-bottom: 29px;
+}
+
+.lectures-header .container {
+    padding: 0 11px;
+}
+
+@media (max-width: 1114px) {
+   .lectures-header .container {
+        padding: 0 20px;
+    } 
 }
 
 @media (max-width: 1037px) {
@@ -544,6 +563,7 @@ legend {
     font-weight: 400;
     color: #fff;
     transition: 0.3s ease-out;
+    max-height: 31px;
 }
 
 .objectives-top-link {
@@ -994,9 +1014,12 @@ legend {
 }
 
 .filter__link {
+    max-width: 289px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     column-gap: 46px;
     padding: 11px 23px;
     background-color: #6D7878;
@@ -1005,12 +1028,6 @@ legend {
     font-weight: 700;
     color: #fff;
     transition: 0.3s ease-out;
-}
-
-@media (max-width: 390px) {
-    .filter__link {
-        justify-content: flex-end;
-    }
 }
 
 .filter__link:hover {
@@ -1081,9 +1098,11 @@ legend {
 }
 
 .expert-img {
-    width: 72px;
-    height: 72px;
-    border-radius: 100px;
+    width: 62px;
+    height: 62px;
+    border-radius: 58.491px;
+    border: 2px solid #FFF;
+    box-shadow: 0px 0px 8.773585319519043px 0px rgba(0, 0, 0, 0.13);
     margin-right: 16px;
 }
 
@@ -1114,6 +1133,12 @@ legend {
     column-gap: 22px;
     margin-bottom: 15px;
     padding-right: 40px;
+}
+
+.filter-cards__top .expert-img {
+    width: 72px;
+    height: 72px;
+    margin-right: 0;
 }
 
 .filter-cards__title {
@@ -1217,6 +1242,8 @@ legend {
     width: 106px;
     height: 106px;
     border-radius: 100px;
+    border: 6px solid #FFF;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.13);
 }
 
 .expert-social {
@@ -1225,12 +1252,13 @@ legend {
 }
 
 .expert-link {
-    width: calc(100% - 61px);
+    width: 100%;
+    max-width: 289px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     column-gap: 45px;
     padding: 11px 23px;
     font-size: 11.703px;
@@ -1245,12 +1273,6 @@ legend {
 .expert-link:hover {
     background-color: #FF922D;
     transition: 0.3s ease-out;
-}
-
-@media (max-width: 390px) {
-    .expert-link {
-        justify-content: flex-end;
-    }
 }
 
 @media (max-width: 320px) {
@@ -2062,6 +2084,7 @@ legend {
 
 .main-content__top {
     margin-bottom: 36px;
+    margin-left: 5px;
 }
 
 @media (max-width: 1037px) {
@@ -2453,7 +2476,7 @@ legend {
 .item-active {
     padding: 20px 22px;
     background: linear-gradient(180deg, #FF8B20 0%, #FF7D04 100%);
-    border-radius: 30px;
+    border-radius: 30px 0 30px 30px;
 }
 
 .psychology-item {
@@ -2464,6 +2487,9 @@ legend {
 @media (max-width: 1114px) {
     .psychology-item {
         display: block;
+    }
+    .item-active {
+        border-radius: 30px;
     }
 }
 
@@ -2926,6 +2952,12 @@ legend {
     flex: 1;
 }
 
+@media (max-width: 1114px) {
+    .work-materials {
+        display: none;
+    }
+}
+
 .work-materials__title {
     font-family: Lobster;
     font-size: 25px;
@@ -3165,6 +3197,7 @@ legend {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px 0;
 }
 .login-popup::-webkit-scrollbar {
     width: 10px;
@@ -3198,6 +3231,12 @@ legend {
     overflow-y: auto;
     height: 100%;
     max-height: 715px;
+}
+
+@media (max-width: 600px) {
+    .login-popup {
+        border-radius: 0;
+    }
 }
 
 .titles {
@@ -4425,8 +4464,10 @@ legend {
 }
 
 .statitics__link {
+    width: 100%;
+    max-width: 289px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 29px;
     padding: 11px 23px;
@@ -4519,13 +4560,18 @@ legend {
     align-items: center;
     padding: 5px 13px;
     background-color: #FF922D;
-    margin-left: auto;
     font-size: 11.703px;
     column-gap: 13px;
     border-radius: 23.405px;
     color: #fff;
     font-weight: 700;
     transition: 0.3s ease-out;
+}
+
+@media (max-width: 1114px) {
+   .objectives-week__link {
+        margin-left: auto;
+   } 
 }
 
 .objectives-week__link:hover {
@@ -5396,6 +5442,7 @@ legend {
     border-radius: 30px 0px 30px 30px;
     background-color: #C8C8C8;
     margin-bottom: 29px;
+    min-height: 186px;
 }
 
 .rate__text {
@@ -6491,6 +6538,7 @@ legend {
     font-size: 16.364px;
     font-weight: 600;
     color: #929292;
+    margin-top: 17px;
 }
 
 .personal-date {
@@ -6504,10 +6552,15 @@ legend {
     width: 100%;
 }
 
+.personal-date__left-btn {
+    flex-shrink: 0;
+}
+
 .personal-date__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 10px;
     padding: 12px 18px;
     background-color: #fff;
     border-radius: 10px;
@@ -7220,6 +7273,7 @@ select {
 .personally-popup__item {
     width: 100%;
     max-width: 600px;
+    height: 100%;
     position: relative;
     background-color: #fff;
     padding: 36px 21px 33px 19px;
@@ -7227,6 +7281,14 @@ select {
     border-radius: 30px;
 }
 
+.personally-popup__item::-webkit-scrollbar {
+    width: 5px;
+}
+
+.personally-popup__item::-webkit-scrollbar-thumb {
+    background-color: #FF922D;
+    border-radius: 5px;
+}
 
 .personally-popup__close {
     position: absolute;
@@ -7252,10 +7314,17 @@ select {
 }
 
 .text {
-    font-size: 13px;
+    font-size: 14px;
+    font-style: italic;
     font-weight: 400;
-    color: #464646;
+    color: #6C5E41;
     margin-bottom: 26px;
+}
+
+.personally-popup .text {
+    font-style: normal;
+    font-size: 13px;
+    color: #464646;
 }
 
 .popup-cards {
@@ -8287,8 +8356,17 @@ select {
 }
 
 .profile-change-link {
+    position: relative;
     max-width: 289px;
     padding: 5px 26px;
+    justify-content: center;
+}
+
+.profile-change-link svg {
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .item-active:nth-child(2) {
@@ -8696,6 +8774,7 @@ select {
     color: #454545;
     font-weight: 400;
     line-height: 100%;
+    margin-bottom: 4px;
 }
 
 .main-content__text {
@@ -8793,6 +8872,9 @@ select {
 
 
 .content-left__coins {
+    display: block;
+    width: 100%;
+    text-align: center;
     font-size: 44.192px;
     font-weight: 900;
     line-height: 50%;
@@ -8885,7 +8967,7 @@ select {
     padding: 10px;
     font-size: 16.364px;
     font-weight: 700;
-    color: #E16F06;
+    color: #6D6D6D;
     border-radius: 50px;
     background-color: #fff;
     transition: 0.3s ease-out;
@@ -9107,6 +9189,7 @@ select {
     padding: 15px 34px;
     font-size: 16.364px;
     font-weight: 600;
+    color: #929292;
 }
 
 .profile-popup__close {
@@ -9227,6 +9310,8 @@ select {
     width: 100%;
     max-height: 106px;
     border-radius: 100px;
+    border: 2px solid #FFF;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.13);
 }
 
 @media (max-width: 371px) {
@@ -9283,9 +9368,17 @@ select {
 @media (max-width: 1114px) {
     .mobile-materials {
         display: flex !important;
+        align-items: center;
+    }
+    .lectures-materials {
+        display: block !important;
+        margin-top: 70px;
     }
     .materials {
         display: none;
+    }
+    .lectures-materials .work-materials__title {
+        text-align: center;
     }
 }
 
@@ -9356,8 +9449,7 @@ select {
 
 .bottom-links__link {
     width: 100%;
-    max-width: 165px;
-    padding: 20px 18px;
+    padding: 18px 20px 19px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9400,7 +9492,6 @@ select {
     padding: 38px 20px 38px 29px;
     background-color: #fff;
     border-radius: 30px;
-    min-height: 386px;
     margin-bottom: 31px;
 }
 
@@ -9418,6 +9509,15 @@ select {
 .archive-description {
     min-height: unset;
     padding: unset;
+}
+
+.description__title {
+    color: #464646;
+    font-family: Fira Sans Condensed;
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    line-height: 100%;
 }
 
 .psychology-description {
@@ -9454,6 +9554,14 @@ select {
 .video-item img {
     width: 100%;
     border-radius: 5px;
+}
+
+.video-item-num {
+    color: #838383;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
 }
 
 .video-item__box {
@@ -9565,7 +9673,8 @@ ol li {
     max-width: 350px;
     width: 100%;
     background-color: #fff;
-    padding: 35px 17px 52px 30px;
+    padding: 35px 17px 30px 30px;
+    max-height: 421px;
 }
 
 .psychology-popup__top {
